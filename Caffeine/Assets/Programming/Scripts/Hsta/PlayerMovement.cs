@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //public float moveSpeed = 5f; // 플레이어 이동 속도
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트
+    public float speed = 8f;
 
     void Start()
     {
@@ -29,6 +30,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveDirection = new Vector2(moveX, moveY).normalized; // 대각선 이동 시 속도 일정하게 유지
 
         // Rigidbody2D를 사용하여 이동 (물리 충돌 처리)
-        rb.MovePosition(rb.position + moveDirection * PlayerManager.Instance.moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + moveDirection * (PlayerManager.Instance.moveSpeed * speed) * Time.fixedDeltaTime);
     }
 }
