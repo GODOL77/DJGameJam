@@ -12,10 +12,18 @@ public class EnemyMovement : MonoBehaviour
     public GameObject experienceOrbPrefab; // 경험치 오브 프리팹
     [SerializeField] public float moveSpeed = 3f; // 이동 속도
     [SerializeField] public int attackDamage = 10;
+    public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
+
+    [Header("Red Bean Bomb Bread Settings")]
+    public float explosionRadius = 3.5f; // 폭발 반경
+    public int explosionDamage = 20; // 폭발 피해량
+    public GameObject explosionEffectPrefab; // 폭발 이펙트 프리팹
+    public float explosionDelay = 0.5f; // 폭발 지연 시간
+
     private Transform playerTarget; // 플레이어의 Transform
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트
 
-    public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
+
     //public int creamEnemySpawnHealth = 5; // 분열된 크림 적의 체력
 
     void Awake()
@@ -56,6 +64,16 @@ public class EnemyMovement : MonoBehaviour
             Vector2 direction = (playerTarget.position - transform.position).normalized;
             // Rigidbody2D를 사용하여 이동 (물리 충돌 처리)
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+
+            // 단팥폭탄빵일 경우 플레이어와의 거리를 체크하여 폭발 트리거
+            if (myBread == BreadType.RedBeanBombBread)
+            {
+                float distanceToPlayer = Vector2.Distance(transform.position, playerTarget.position);
+                if (distanceToPlayer <= explosionRadius)
+                {
+                    StartCoroutine(ExplodeAfterDelay());
+                }
+            }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -104,6 +122,13 @@ public class EnemyMovement : MonoBehaviour
     {
         Debug.Log("Enemy Died!");
 
+        // 단팥폭탄빵일 경우 즉시 폭발
+        if (myBread == BreadType.RedBeanBombBread)
+        {
+            Explode();
+            return; // 폭발 후에는 일반적인 파괴 로직을 건너뜁니다.
+        }
+
         // 경험치 오브 드롭
         if (experienceOrbPrefab != null)
         {
@@ -142,5 +167,57 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         Destroy(gameObject); // 현재 적 오브젝트 파괴
+    }
+
+    // 폭발 메서드
+    void Explode()
+    {
+        Debug.Log("Red Bean Bomb Bread Exploded!");
+
+        // 폭발 이펙트 생성
+        if (explosionEffectPrefab != null)
+        {
+            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+        }
+
+        // 플레이어에게 피해 주기
+        if (playerTarget != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, playerTarget.position);
+            if (distanceToPlayer <= explosionRadius)
+            {
+                if (PlayerManager.Instance != null)
+                {
+                    PlayerManager.Instance.TakeDamage(explosionDamage);
+                    Debug.Log($"Player took {explosionDamage} damage from explosion.");
+                }
+            }
+        }
+        
+        // 경험치 오브 드롭 (폭발 시에도 드롭)
+        if (experienceOrbPrefab != null)
+        {
+            GameObject xpOrb = Instantiate(experienceOrbPrefab, transform.position, Quaternion.identity);
+            ExperienceOrb orbScript = xpOrb.GetComponent<ExperienceOrb>();
+            if (orbScript != null)
+            {
+                orbScript.xpAmount = dropXP;
+                orbScript.attractionRange = PlayerManager.Instance.attractionRange;
+            }
+        }
+
+        Destroy(gameObject); // 적 오브젝트 파괴
+    }
+
+    // 지연 후 폭발 코루틴
+    IEnumerator ExplodeAfterDelay()
+    {
+        // 폭발 지연 시간 동안 적의 움직임을 멈추거나 다른 상태로 전환할 수 있습니다.
+        // 예: moveSpeed = 0;
+        // 예: 애니메이션 변경
+
+        yield return new WaitForSeconds(explosionDelay);
+
+        Explode();
     }
 }
