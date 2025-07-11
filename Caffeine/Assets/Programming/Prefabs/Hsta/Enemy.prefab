@@ -246,4 +246,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d44668c3ff467f4ea90220a5d9d36ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myBread: 0
+  maxHealth: 10
+  currentHealth: 0
+  dropXP: 10
+  experienceOrbPrefab: {fileID: 1727987041099687454, guid: 68ee634152be70c4cbce195a91b65e01, type: 3}
   moveSpeed: 3
+  attackDamage: 10
+  creamEnemyPrefab: {fileID: 0}

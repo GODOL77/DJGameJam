@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public int maxHealth = 10; // 최대 체력
     public int currentHealth; // 현재 체력
     public int dropXP = 10;
+    public GameObject experienceOrbPrefab; // 경험치 오브 프리팹
     [SerializeField] public float moveSpeed = 3f; // 이동 속도
     [SerializeField] public int attackDamage = 10;
     private Transform playerTarget; // 플레이어의 Transform
@@ -56,6 +57,10 @@ public class EnemyMovement : MonoBehaviour
             // Rigidbody2D를 사용하여 이동 (물리 충돌 처리)
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Die();
+        }
     }
 
     // 다른 Collider2D와 충돌이 지속되는 동안 호출됩니다.
@@ -98,6 +103,22 @@ public class EnemyMovement : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy Died!");
+
+        // 경험치 오브 드롭
+        if (experienceOrbPrefab != null)
+        {
+            GameObject xpOrb = Instantiate(experienceOrbPrefab, transform.position, Quaternion.identity);
+            ExperienceOrb orbScript = xpOrb.GetComponent<ExperienceOrb>();
+            if (orbScript != null)
+            {
+                orbScript.xpAmount = dropXP;
+                orbScript.attractionRange = PlayerManager.Instance.attractionRange;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Experience Orb Prefab is not assigned in EnemyMovement script.");
+        }
 
         if (myBread == BreadType.CreamBread)
         {
