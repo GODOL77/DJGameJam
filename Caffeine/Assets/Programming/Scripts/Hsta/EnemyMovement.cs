@@ -73,12 +73,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (currentHealth <= 0)
-        {
-
-            return;
-        }
-
+       
 
 
         currentHealth -= damage;
@@ -86,9 +81,9 @@ public class EnemyMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Player Died!");
+            Debug.Log("enemy Died!");
             // TODO: 게임 오버 처리 (예: 게임 재시작, UI 표시 등)
-            // Destroy(gameObject); // PlayerManager는 DontDestroyOnLoad이므로 파괴하지 않음
+             Destroy(gameObject); // PlayerManager는 DontDestroyOnLoad이므로 파괴하지 않음
         }
       
     }
