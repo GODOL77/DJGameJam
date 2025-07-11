@@ -161,7 +161,7 @@ MonoBehaviour:
   - {fileID: 7985619342473693220, guid: 73ca53df29aa39f4abf521594a25cac8, type: 3}
   spawnRadius: 15
   spawnInterval: 3
-  maxEnemies: 10
+  maxEnemies: 9999
 --- !u!4 &665176851
 Transform:
   m_ObjectHideFlags: 0

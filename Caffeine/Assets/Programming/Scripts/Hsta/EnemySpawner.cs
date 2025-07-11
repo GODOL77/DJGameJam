@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyPrefabs; // 스폰할 적 프리팹 목록
     public float spawnRadius = 10f; // 플레이어 주변 스폰 반경
     public float spawnInterval = 3f; // 적 스폰 주기 (초)
+    public float initialSpawnDelay = 5f; // 초기 스폰 지연 시간 (초)
     public int maxEnemies = 10; // 동시에 존재할 수 있는 최대 적 수
 
     private Transform playerTransform; // 플레이어의 Transform
@@ -27,12 +28,14 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        // 적 스폰 코루틴 시작
+        // 초기 지연 후 적 스폰 코루틴 시작
         StartCoroutine(SpawnEnemiesRoutine());
     }
 
     IEnumerator SpawnEnemiesRoutine()
     {
+        yield return new WaitForSeconds(initialSpawnDelay); // 초기 지연
+
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
