@@ -8,6 +8,11 @@ public class PlayerManager : MonoBehaviour
     
     public int maxHealth = 100; // 최대 체력
     public int currentHealth; // 현재 체력
+    public int attackDamage = 10;
+    public int playerXP = 0;
+    public float attackSpeed = 1f;
+    public float moveSpeed = 5f;
+    
     private bool isInvincible = false; // 무적 상태 여부
     public float invincibilityDuration = 1f; // 무적 시간 (초)
 
@@ -43,9 +48,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("Player Died!");
-            // TODO: 게임 오버 처리 (예: 게임 재시작, UI 표시 등)
-            // Destroy(gameObject); // PlayerManager는 DontDestroyOnLoad이므로 파괴하지 않음
+         
             return;
         }
 

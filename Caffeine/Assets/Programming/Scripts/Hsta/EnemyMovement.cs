@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float moveSpeed = 3f; // 이동 속도
+    public int maxHealth = 10; // 최대 체력
+    public int currentHealth; // 현재 체력
+    public int dropXP = 10;
+    [SerializeField] public float moveSpeed = 3f; // 이동 속도
+    [SerializeField] public int attackDamage = 10;
     private Transform playerTarget; // 플레이어의 Transform
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트
 
-
+    void Awake()
+    {
+        currentHealth = maxHealth;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
             Debug.LogWarning("Player GameObject with tag 'Player' not found.");
         }
 
-        
+
     }
 
     // FixedUpdate is called once per physics step
@@ -55,7 +62,7 @@ public class EnemyMovement : MonoBehaviour
             // PlayerManager의 TakeDamage 메서드 호출
             if (PlayerManager.Instance != null)
             {
-                PlayerManager.Instance.TakeDamage(10); // 10의 피해를 줍니다.
+                PlayerManager.Instance.TakeDamage(attackDamage); // 10의 피해를 줍니다.
             }
             else
             {
@@ -63,4 +70,28 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        if (currentHealth <= 0)
+        {
+
+            return;
+        }
+
+
+
+        currentHealth -= damage;
+        Debug.Log($"Player took {damage} damage. Current Health: {currentHealth}");
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Player Died!");
+            // TODO: 게임 오버 처리 (예: 게임 재시작, UI 표시 등)
+            // Destroy(gameObject); // PlayerManager는 DontDestroyOnLoad이므로 파괴하지 않음
+        }
+      
+    }
+    
+   
 }
