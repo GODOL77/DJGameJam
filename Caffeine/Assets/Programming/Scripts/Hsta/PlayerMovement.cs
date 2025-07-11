@@ -5,6 +5,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // 플레이어 이동 속도
+    private Rigidbody2D rb; // Rigidbody2D 컴포넌트
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D component not found on Player! Please add a Rigidbody2D and Collider2D to the player GameObject and set Gravity Scale to 0.");
+            enabled = false; // 스크립트 비활성화
+            return;
+        }
+    }
 
     void FixedUpdate()
     {
@@ -15,8 +27,7 @@ public class PlayerMovement : MonoBehaviour
         // 이동 방향 벡터 계산
         Vector2 moveDirection = new Vector2(moveX, moveY).normalized; // 대각선 이동 시 속도 일정하게 유지
 
-        // 플레이어 이동
-        // Time.fixedDeltaTime을 곱하여 프레임 속도에 독립적인 움직임 보장
-        transform.Translate(moveDirection * moveSpeed * Time.fixedDeltaTime);
+        // Rigidbody2D를 사용하여 이동 (물리 충돌 처리)
+        rb.MovePosition(rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
     }
 }
