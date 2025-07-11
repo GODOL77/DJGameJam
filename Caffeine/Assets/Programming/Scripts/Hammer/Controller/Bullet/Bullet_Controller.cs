@@ -20,7 +20,7 @@ public class Bullet_Controller : MonoBehaviour
     // blueberryjam
     public float blueberryJamRotateSpeed = 200.0f;
     public float homingRange = 5f;
-
+    public int DMG = 10;
 
     // Functions //
     // default functions
@@ -101,9 +101,11 @@ public class Bullet_Controller : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
+            other.GetComponent<EnemyMovement>().TakeDamage(DMG);
             if (!weaponManager.grapeJam && !weaponManager.gameJam)
             {
                 Destroy(gameObject);
+
             }
         }
     }
