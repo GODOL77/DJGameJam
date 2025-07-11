@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Weapon_Manager : MonoBehaviour
 {
+    // Single Tone //
+    private static Weapon_Manager weaponManager = null;
     // Private Variable //
 
     // Public Variable //
@@ -25,6 +27,11 @@ public class Weapon_Manager : MonoBehaviour
 
     // Functions //
     // default functions
+    void Awake()
+    {
+        SingleTone();
+    }
+
     void Start()
     {
 
@@ -37,4 +44,29 @@ public class Weapon_Manager : MonoBehaviour
 
     // system Functions
 
+    // single tone
+    void SingleTone()
+    {
+        if (null == weaponManager)
+        {
+            weaponManager = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public static Weapon_Manager WeaponManager
+    {
+        get
+        {
+            if (null == weaponManager)
+            {
+                return null;
+            }
+            return weaponManager;
+        }
+    }
 }
