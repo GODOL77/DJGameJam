@@ -138,6 +138,7 @@ public class PlayerManager : MonoBehaviour
         }
         
         playerLevel++;
+        playerXP = 0;
 
         Debug.Log($"Player Leveled Up! New Level: {playerLevel}");
 

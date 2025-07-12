@@ -3643,7 +3643,7 @@ PrefabInstance:
       objectReference: {fileID: 748906995}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: playerXP
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: maxHealth
@@ -3651,7 +3651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: xpToNextLevel
-      value: 225
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: temporaryCardSpawner
@@ -3671,11 +3671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: playerLevelDesigns.Array.data[0].L_xpToNextLevel
-      value: 225
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: playerLevelDesigns.Array.data[1].L_xpToNextLevel
-      value: 337
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: playerLevelDesigns.Array.data[2].L_xpToNextLevel

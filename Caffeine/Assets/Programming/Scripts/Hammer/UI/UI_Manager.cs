@@ -40,8 +40,7 @@ public class UI_Manager : MonoBehaviour
     {
         if (expSlider)
         {
-            float startValue = playerManager.xpToNextLevel - (playerManager.xpToNextLevel / 3);
-            float sliderValue = (playerManager.playerXP - startValue) / (playerManager.xpToNextLevel - startValue);
+            float sliderValue = (float)playerManager.playerXP / (float)playerManager.xpToNextLevel;
             expSlider.value = sliderValue;
         }
 
