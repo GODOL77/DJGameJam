@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
     public int attackDamage; // Initialized by level design
     public int playerXP = 0;
     public int xpToNextLevel;
+    public int plusXP = 0;
     public float attackSpeed; // This stat is not in playerLevelDesign, so keep it as is
     public float moveSpeed; // Initialized by level design
 
@@ -35,6 +36,7 @@ public class PlayerManager : MonoBehaviour
     public float attractionRange = 2f; // Not in playerLevelDesign, keep as is
 
     public Slider hpBar; // hp바 슬라이더
+    public TemporaryCardSpawner temporaryCardSpawner; // TemporaryCardSpawner 직접 참조
 
 
     void Awake()
@@ -77,13 +79,21 @@ public class PlayerManager : MonoBehaviour
     public void HPBar()
     {
         // float hpValue = currentHealth / maxHealth;
-        hpBar.value = (float)currentHealth / (float)maxHealth;
+        if (hpBar != null)
+        {
+            hpBar.value = (float)currentHealth / (float)maxHealth;
+            hpBar.transform.localScale = new Vector3(maxHealth / 100, 1.0f, 1.0f);
+        }
+        else
+        {
+            Debug.LogWarning("HP Bar Slider is not assigned in PlayerManager.");
+        }
     }
 
     // 경험치 획득 메서드
     public void GainXP(int amount)
     {
-        playerXP += amount;
+        playerXP += (amount+plusXP);
 
         // Get the xpToNextLevel for the current level
         playerLevelDesign? currentLevelData = playerLevelDesigns.FirstOrDefault(d => d.L_Level == playerLevel);
@@ -127,6 +137,17 @@ public class PlayerManager : MonoBehaviour
 
         ApplyLevelDesign(playerLevel); // Apply new level's stats
         currentHealth = maxHealth; // Restore health on level up
+
+        // TemporaryCardSpawner 활성화
+        if (temporaryCardSpawner != null)
+        {
+            temporaryCardSpawner.gameObject.SetActive(true);
+            Debug.Log("TemporaryCardSpawner activated on LevelUp.");
+        }
+        else
+        {
+            Debug.LogWarning("TemporaryCardSpawner reference is not set in PlayerManager. Cannot activate.");
+        }
     }
 
     // 레벨 디자인 적용 메서드

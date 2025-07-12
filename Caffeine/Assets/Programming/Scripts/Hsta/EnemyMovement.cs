@@ -17,6 +17,9 @@ public class EnemyMovement : MonoBehaviour
     private float currentAttackCoolTime = 0.0f;
     public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
     private bool creamDied = false;
+    private bool canDamage = false;
+    private Animator animator; // Animator 컴포넌트
+    private CircleCollider2D col; // CircleCollider2D 컴포넌트
 
     [Header("Red Bean Bomb Bread Settings")]
     public float explosionRadius = 3.5f; // 폭발 반경
@@ -57,7 +60,20 @@ public class EnemyMovement : MonoBehaviour
             Debug.LogWarning("Player GameObject with tag 'Player' not found.");
         }
 
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.Log("Animator component not foundd on Enemy!");
+        }
+
+        col = GetComponent<CircleCollider2D>();
+        if (col == null)
+        {
+            Debug.Log("CircleCollider2D component not found on Enenmy!");
+        }
+
         spriteRenderer = GetComponent<SpriteRenderer>();
+        canDamage = true;
     }
 
     // FixedUpdate is called once per physics step
@@ -105,7 +121,7 @@ public class EnemyMovement : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision)
     {
         // 충돌한 오브젝트가 "Player" 태그를 가지고 있는지 확인
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && canDamage)
         {
             // PlayerManager의 TakeDamage 메서드 호출
             if (PlayerManager.Instance != null)
@@ -126,7 +142,7 @@ public class EnemyMovement : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && canDamage)
         {
             canAttack = false;
             currentAttackCoolTime = 0.0f;
@@ -216,6 +232,15 @@ public class EnemyMovement : MonoBehaviour
                 }
             }
         }
+
+        canDamage = false;
+        moveSpeed = 0.0f;
+        col.isTrigger = true;
+        animator.SetBool("isDead?", true);
+    }
+
+    private void Dead()
+    {
         Destroy(gameObject); // 현재 적 오브젝트 파괴
     }
 
@@ -256,7 +281,10 @@ public class EnemyMovement : MonoBehaviour
             }
         }
 
-        Destroy(gameObject); // 적 오브젝트 파괴
+        canDamage = false;
+        moveSpeed = 0.0f;
+        col.isTrigger = true;
+        animator.SetBool("isDead?", true);
     }
 
     // 지연 후 폭발 코루틴

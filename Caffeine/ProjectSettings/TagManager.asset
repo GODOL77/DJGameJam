@@ -8,11 +8,12 @@ TagManager:
   - Weapon_Manager
   - Ground
   - State_Manager
+  - Area
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 
