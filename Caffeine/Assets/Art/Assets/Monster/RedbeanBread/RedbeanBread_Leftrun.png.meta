@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123740e245813455c95adad5e644ac98
+      internalID: -1571709941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaffa1214e7f24521a86fbdd16ba2eea
+      internalID: -1659725362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd1ab2277d2044de8234e8e0141edfd
+      internalID: -1915380856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0887a595e8a4c4d38b6c582fc120c2bf
+      internalID: 1885301418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c29337a6ee394566a0c0cecc74ffba1
+      internalID: -545086175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_5
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8d6b52fc7c14aad823050147e92fae
+      internalID: 2124485911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_6
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6ed4ec63c0e4207b73a11ef8bddb98
+      internalID: -1868127697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_Leftrun_7
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3361af428f2a545a4805ee4e9f45f7db
+      internalID: 545900930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +274,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RedbeanBread_Leftrun_0: -1571709941
+      RedbeanBread_Leftrun_1: -1659725362
+      RedbeanBread_Leftrun_2: -1915380856
+      RedbeanBread_Leftrun_3: 1885301418
+      RedbeanBread_Leftrun_4: -545086175
+      RedbeanBread_Leftrun_5: 2124485911
+      RedbeanBread_Leftrun_6: -1868127697
+      RedbeanBread_Leftrun_7: 545900930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

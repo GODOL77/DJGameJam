@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform playerTarget; // 플레이어의 Transform
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트
+    private SpriteRenderer spriteRenderer; // SpriteRenderer 컴포넌트
 
 
     //public int creamEnemySpawnHealth = 5; // 분열된 크림 적의 체력
@@ -51,8 +52,8 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.LogWarning("Player GameObject with tag 'Player' not found.");
         }
-       
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // FixedUpdate is called once per physics step
@@ -60,6 +61,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if (playerTarget != null)
         {
+            // 플렝이어 기준으로 왼쪽에 있는지 오른쪽에 있는지 확인하여 이미지 flip
+            SpriteFlip();
+
             // 플레이어를 향하는 방향 벡터
             Vector2 direction = (playerTarget.position - transform.position).normalized;
             // Rigidbody2D를 사용하여 이동 (물리 충돌 처리)
@@ -96,6 +100,18 @@ public class EnemyMovement : MonoBehaviour
             {
                 Debug.LogWarning("PlayerManager Instance not found.");
             }
+        }
+    }
+
+    void SpriteFlip()
+    {
+        if (playerTarget.position.x > transform.position.x)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            spriteRenderer.flipX = true;
         }
     }
 

@@ -115,16 +115,6 @@ public class PlayerManager : MonoBehaviour
 
         ApplyLevelDesign(playerLevel); // Apply new level's stats
         currentHealth = maxHealth; // Restore health on level up
-
-        // 보너스 카드 선택 UI 표시
-        if (BonusCardManager.Instance != null)
-        {
-            BonusCardManager.Instance.ShowBonusCards();
-        }
-        else
-        {
-            Debug.LogWarning("BonusCardManager Instance not found. Cannot show bonus cards.");
-        }
     }
 
     // 레벨 디자인 적용 메서드

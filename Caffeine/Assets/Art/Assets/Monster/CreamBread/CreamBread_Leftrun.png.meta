@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f593f259d674ca69a7ebd00d6ddc35
+      internalID: 1742802113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d6e14016f594075b7513cf9a46008a
+      internalID: -1486063568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0587c6901f1234d9daf1c5d29e2a82b6
+      internalID: -944771159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08057e27d9ddc462f9133c6150f44f58
+      internalID: 284389163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34def93c3043b4a6f81869e013e73172
+      internalID: -1721003026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_5
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43d60b64865f4ce8936b94a57052e93
+      internalID: 1639968095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_6
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d420323436fb24727890f0b9cc6d7a4c
+      internalID: 1566594317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CreamBread_Leftrun_7
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 0
+        width: 119
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3c8856147d14d1ca7b32993a3a8b58
+      internalID: 71244706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +274,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CreamBread_Leftrun_0: 1742802113
+      CreamBread_Leftrun_1: -1486063568
+      CreamBread_Leftrun_2: -944771159
+      CreamBread_Leftrun_3: 284389163
+      CreamBread_Leftrun_4: -1721003026
+      CreamBread_Leftrun_5: 1639968095
+      CreamBread_Leftrun_6: 1566594317
+      CreamBread_Leftrun_7: 71244706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
