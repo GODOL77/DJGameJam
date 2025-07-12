@@ -171,7 +171,7 @@ MonoBehaviour:
   attackDamage: 10
   attackCoolTime: 2
   creamEnemyPrefab: {fileID: 0}
-  noDamageCoolTime: 0.5
+  noDamageCoolTime: 0.2
   explosionRadius: 2
   explosionDamage: 20
   explosionEffectPrefab: {fileID: 0}
