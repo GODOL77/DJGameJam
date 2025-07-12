@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq; // For .FirstOrDefault()
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct playerLevelDesign
@@ -33,6 +34,8 @@ public class PlayerManager : MonoBehaviour
     public float invincibilityDuration = 1f; // 무적 시간 (초)
     public float attractionRange = 2f; // Not in playerLevelDesign, keep as is
 
+    public Slider hpBar; // hp바 슬라이더
+
 
     void Awake()
     {
@@ -61,6 +64,8 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HPBar();
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("q 키가 눌렸습니다!");
@@ -68,11 +73,17 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    // 플레이어 hp바 메서드
+    public void HPBar()
+    {
+        hpBar.value = currentHealth / maxHealth;
+    }
+
     // 경험치 획득 메서드
     public void GainXP(int amount)
     {
         playerXP += amount;
-        
+
         // Get the xpToNextLevel for the current level
         playerLevelDesign? currentLevelData = playerLevelDesigns.FirstOrDefault(d => d.L_Level == playerLevel);
 
@@ -158,6 +169,7 @@ public class PlayerManager : MonoBehaviour
 
         currentHealth -= damage;
         Debug.Log($"Player took {damage} damage. Current Health: {currentHealth}");
+        Debug.Log(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {

@@ -12,6 +12,9 @@ public class EnemyMovement : MonoBehaviour
     public GameObject experienceOrbPrefab; // 경험치 오브 프리팹
     [SerializeField] public float moveSpeed = 3f; // 이동 속도
     [SerializeField] public int attackDamage = 10;
+    public float attackCoolTime = 2.0f;
+    private bool canAttack = false;
+    private float currentAttackCoolTime = 0.0f;
     public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
 
     [Header("Red Bean Bomb Bread Settings")]
@@ -83,6 +86,18 @@ public class EnemyMovement : MonoBehaviour
         {
             Die();
         }
+
+        if (canAttack)
+        {
+            if (currentAttackCoolTime < attackCoolTime)
+            {
+                currentAttackCoolTime += Time.deltaTime * 1;
+            }
+            else
+            {
+                currentAttackCoolTime = 0.0f;
+            }
+        }
     }
 
     // 다른 Collider2D와 충돌이 지속되는 동안 호출됩니다.
@@ -94,13 +109,27 @@ public class EnemyMovement : MonoBehaviour
             // PlayerManager의 TakeDamage 메서드 호출
             if (PlayerManager.Instance != null)
             {
-                PlayerManager.Instance.TakeDamage(attackDamage); // 10의 피해를 줍니다.
+                canAttack = true;
+                if (currentAttackCoolTime == 0.0f)
+                {
+                    Debug.LogError("Attack");
+                    PlayerManager.Instance.TakeDamage(attackDamage); // 10의 피해를 줍니다.
+                }
             }
             else
             {
                 Debug.LogWarning("PlayerManager Instance not found.");
             }
         }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            canAttack = false;
+            currentAttackCoolTime = 0.0f;
+        }    
     }
 
     void SpriteFlip()
