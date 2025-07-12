@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpHpCard : MonoBehaviour
+public class UpXPCard : MonoBehaviour
 {
     public void UsingButton()
     {
         if (PlayerManager.Instance != null)
         {
-            PlayerManager.Instance.maxHealth += 20;
-            PlayerManager.Instance.currentHealth += 20;
-            Debug.Log($"Attack Speed Up! New Attack Speed: {PlayerManager.Instance.attackSpeed}");
+            PlayerManager.Instance.plusXP+=2; // 경험치 2 추가
+            //Debug.Log($"Gained 2 additional XP. Current XP: {PlayerManager.Instance.playerXP}");
         }
             
-             // TemporaryCardSpawner 오브젝트를 찾아 비활성화
+        // TemporaryCardSpawner 오브젝트를 찾아 비활성화
         TemporaryCardSpawner spawner = FindObjectOfType<TemporaryCardSpawner>();
         if (spawner != null)
         {
