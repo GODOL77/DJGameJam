@@ -93,9 +93,10 @@ public class EnemyMovement : MonoBehaviour
             if (myBread == BreadType.RedBeanBombBread)
             {
                 float distanceToPlayer = Vector2.Distance(transform.position, playerTarget.position);
-                if (distanceToPlayer <= explosionRadius)
+                if (distanceToPlayer <= explosionRadius && canDamage)
                 {
                     StartCoroutine(ExplodeAfterDelay());
+                    canDamage = false;
                 }
             }
         }
@@ -176,7 +177,14 @@ public class EnemyMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            if (myBread != BreadType.RedBeanBombBread)
+            {
+                Die();
+            }
+            else
+            {
+                Explode();
+            }
         }
     }
 
@@ -184,12 +192,12 @@ public class EnemyMovement : MonoBehaviour
     {
         Debug.Log("Enemy Died!");
 
-        // 단팥폭탄빵일 경우 즉시 폭발
-        if (myBread == BreadType.RedBeanBombBread)
-        {
-            Explode();
-            return; // 폭발 후에는 일반적인 파괴 로직을 건너뜁니다.
-        }
+        // // 단팥폭탄빵일 경우 즉시 폭발
+        // if (myBread == BreadType.RedBeanBombBread)
+        // {
+        //     Explode();
+        //     return; // 폭발 후에는 일반적인 파괴 로직을 건너뜁니다.
+        // }
 
         // 경험치 오브 드롭
         if (experienceOrbPrefab != null)

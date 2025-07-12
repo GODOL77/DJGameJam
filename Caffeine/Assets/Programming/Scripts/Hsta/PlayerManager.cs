@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     public int currentHealth; // Initialized by level design
     public int attackDamage=20; // Initialized by level design
     public int playerXP = 0;
-    public int xpToNextLevel=150;
+    public int xpToNextLevel= 150;
     public int plusXP = 0;
     public float attackSpeed=1; // This stat is not in playerLevelDesign, so keep it as is
     public float moveSpeed=1; // Initialized by level design
