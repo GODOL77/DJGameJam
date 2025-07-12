@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     private bool canAttack = false;
     private float currentAttackCoolTime = 0.0f;
     public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
+    private Animator animator; // Animator 컴포넌트
 
     [Header("Red Bean Bomb Bread Settings")]
     public float explosionRadius = 3.5f; // 폭발 반경
@@ -54,6 +55,12 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             Debug.LogWarning("Player GameObject with tag 'Player' not found.");
+        }
+
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator component not found on Enemy!");
         }
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -200,10 +207,10 @@ public class EnemyMovement : MonoBehaviour
                     // 약간의 오프셋을 주어 스폰 위치 조정
                     Vector3 spawnOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                     GameObject newCreamEnemy = Instantiate(creamEnemyPrefab, transform.position + spawnOffset, Quaternion.identity);
-                    
+
                     // 스폰된 크림 적의 체력 설정
                     EnemyMovement newEnemyMovement = newCreamEnemy.GetComponent<EnemyMovement>();
-                    
+
                 }
                 else
                 {
@@ -211,7 +218,17 @@ public class EnemyMovement : MonoBehaviour
                 }
             }
         }
-        Destroy(gameObject); // 현재 적 오브젝트 파괴
+
+        // Destroy(gameObject); // 현재 적 오브젝트 파괴
+
+        animator.SetBool("isDead?", true);
+        moveSpeed = 0.0f;
+    }
+
+    // 죽음 후 애니메이션 이벤트
+    private void Dead()
+    {
+        Destroy(this.gameObject);
     }
 
     // 폭발 메서드
