@@ -1,16 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text timerText;
+    public float startTime = 300.0f;
+
+    private float currentTime;
+    private bool isRunning = true;
+
     void Start()
     {
-        
+        currentTime = startTime;
     }
 
     void Update()
     {
-        
+        InGameTimer();
+    }
+
+    private void InGameTimer()
+    {
+        if (!isRunning)
+            return;
+
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f;
+            isRunning = false;
+        }
+
+        // 분:초 형식으로 변환해서 UI 표시
+        int minutes = Mathf.FloorToInt(currentTime / 60f);
+        int seconds = Mathf.FloorToInt(currentTime % 60f);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

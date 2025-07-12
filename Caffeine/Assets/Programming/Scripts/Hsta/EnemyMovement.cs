@@ -30,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
     private Transform playerTarget; // 플레이어의 Transform
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트
     private SpriteRenderer spriteRenderer; // SpriteRenderer 컴포넌트
+    private GameManager gameManager; // GameManager 컴포넌트
 
 
     //public int creamEnemySpawnHealth = 5; // 분열된 크림 적의 체력
@@ -164,6 +165,9 @@ public class EnemyMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        spriteRenderer.color = new Color(1,0,0,1);
+        Invoke("ResetColor", 0.5f);
+
         if (myBread == BreadType.Baguette)
         {
             currentHealth -= 1;
@@ -186,6 +190,11 @@ public class EnemyMovement : MonoBehaviour
                 Explode();
             }
         }
+    }
+
+    void ResetColor()
+    {
+        spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
     void Die()
