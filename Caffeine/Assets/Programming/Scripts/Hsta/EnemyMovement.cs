@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     private bool canAttack = false;
     private float currentAttackCoolTime = 0.0f;
     public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
+    private bool creamDied = false;
 
     [Header("Red Bean Bomb Bread Settings")]
     public float explosionRadius = 3.5f; // 폭발 반경
@@ -192,22 +193,26 @@ public class EnemyMovement : MonoBehaviour
 
         if (myBread == BreadType.CreamBread)
         {
-            // 크림 적 2개로 분열
-            for (int i = 0; i < 2; i++)
+            if (creamDied == false)
             {
-                if (creamEnemyPrefab != null)
+                creamDied = true;
+                // 크림 적 2개로 분열
+                for (int i = 0; i < 2; i++)
                 {
-                    // 약간의 오프셋을 주어 스폰 위치 조정
-                    Vector3 spawnOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
-                    GameObject newCreamEnemy = Instantiate(creamEnemyPrefab, transform.position + spawnOffset, Quaternion.identity);
-                    
-                    // 스폰된 크림 적의 체력 설정
-                    EnemyMovement newEnemyMovement = newCreamEnemy.GetComponent<EnemyMovement>();
-                    
-                }
-                else
-                {
-                    Debug.LogWarning("Cream Enemy Prefab is not assigned in EnemyMovement script.");
+                    if (creamEnemyPrefab != null)
+                    {
+                        // 약간의 오프셋을 주어 스폰 위치 조정
+                        Vector3 spawnOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                        GameObject newCreamEnemy = Instantiate(creamEnemyPrefab, transform.position + spawnOffset, Quaternion.identity);
+
+                        // 스폰된 크림 적의 체력 설정
+                        EnemyMovement newEnemyMovement = newCreamEnemy.GetComponent<EnemyMovement>();
+
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Cream Enemy Prefab is not assigned in EnemyMovement script.");
+                    }
                 }
             }
         }
