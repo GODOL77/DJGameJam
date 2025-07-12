@@ -9,6 +9,7 @@ public class Bullet_Controller : MonoBehaviour
     private Rigidbody2D rigid;
     // manager
     private Weapon_Manager weaponManager;
+    private PlayerManager playerManager;
     // target
     private Transform target;
     private float angle = 0.0f;
@@ -20,7 +21,7 @@ public class Bullet_Controller : MonoBehaviour
     // blueberryjam
     public float blueberryJamRotateSpeed = 200.0f;
     public float homingRange = 5f;
-    public int DMG = 10;
+
 
     // Functions //
     // default functions
@@ -29,7 +30,7 @@ public class Bullet_Controller : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifeTime);
 
-        GetWeaponManager();
+        GetManager();
         BlueberryJamFindEnemy();
     }
 
@@ -40,13 +41,18 @@ public class Bullet_Controller : MonoBehaviour
 
     // system functions
     // weapon
-    private void GetWeaponManager()
+    private void GetManager()
     {
         weaponManager = GameObject.FindWithTag("Weapon_Manager").GetComponent<Weapon_Manager>();
-
         if (!weaponManager)
         {
-            Debug.Log("No weapon manager");
+            Debug.LogError("No weapon manager");
+        }
+
+        playerManager = GameObject.FindWithTag("Player").GetComponent<PlayerManager>();
+        if (!playerManager)
+        {
+            Debug.LogError("No player manager");
         }
     }
 
@@ -101,7 +107,7 @@ public class Bullet_Controller : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyMovement>().TakeDamage(DMG);
+            other.GetComponent<EnemyMovement>().TakeDamage(playerManager.attackDamage);
             if (!weaponManager.grapeJam && !weaponManager.gameJam)
             {
                 Destroy(gameObject);
