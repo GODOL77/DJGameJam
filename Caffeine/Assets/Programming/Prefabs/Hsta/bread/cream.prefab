@@ -169,7 +169,9 @@ MonoBehaviour:
   experienceOrbPrefab: {fileID: 1727987041099687454, guid: 68ee634152be70c4cbce195a91b65e01, type: 3}
   moveSpeed: 3
   attackDamage: 10
+  attackCoolTime: 2
   creamEnemyPrefab: {fileID: 7985619342473693220, guid: 1ea27702e87dcdd42a57d2ed9cf0b02f, type: 3}
+  noDamageCoolTime: 0.5
   explosionRadius: 2
   explosionDamage: 20
   explosionEffectPrefab: {fileID: 0}

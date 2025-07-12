@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2014416552, guid: b8a5b8a95577a674699c47c6771cd2fc, type: 3}
+  m_Sprite: {fileID: 1276431656, guid: 6c239ec31ebb42c4d9a0c1c1650e4b3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,7 +169,9 @@ MonoBehaviour:
   experienceOrbPrefab: {fileID: 1727987041099687454, guid: 68ee634152be70c4cbce195a91b65e01, type: 3}
   moveSpeed: 3
   attackDamage: 10
+  attackCoolTime: 2
   creamEnemyPrefab: {fileID: 0}
+  noDamageCoolTime: 0.5
   explosionRadius: 3.5
   explosionDamage: 20
   explosionEffectPrefab: {fileID: 0}
@@ -184,7 +186,7 @@ Animator:
   m_GameObject: {fileID: 7985619342473693220}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8031ed24ef69f440fb2570ff1d26bd03, type: 2}
+  m_Controller: {fileID: 9100000, guid: 42148e4c3cef14734b1167291d668a44, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
