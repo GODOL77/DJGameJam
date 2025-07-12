@@ -22,18 +22,18 @@ public class WeaponSelect_Manager : MonoBehaviour
         {
             Debug.LogError("No Weapon Manager");
         }
-    }
 
-    void Update()
-    {
-        
+        WeaponPage();
     }
 
     private void WeaponPage()
     {
-        jamSelectButtons[pageNumber].SetActive(true);
+        for (int i = 0; i < jamSelectButtons.Length; i++)
+        {
+            jamSelectButtons[i].SetActive(false);
+        }
 
-        
+        jamSelectButtons[pageNumber].SetActive(true);
     }
 
     public void NextButton()
@@ -41,6 +41,7 @@ public class WeaponSelect_Manager : MonoBehaviour
         if (pageNumber < jamSelectButtons.Length - 1)
         {
             pageNumber++;
+            WeaponPage();
             Debug.Log(pageNumber);
         }
     }
@@ -50,6 +51,7 @@ public class WeaponSelect_Manager : MonoBehaviour
         if (pageNumber > 0)
         {
             pageNumber--;
+            WeaponPage();
             Debug.Log(pageNumber);
         }
     }
