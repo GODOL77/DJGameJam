@@ -8,7 +8,9 @@ public class Weapon_Controller : MonoBehaviour
     // manager
     private Weapon_Manager weaponManager;
     // timer
-    public float coolTimer = 0.0f;
+    private float coolTimer = 0.0f;
+    // manager
+    private PlayerManager playerManager;
 
     // Public Variable //
 
@@ -17,7 +19,7 @@ public class Weapon_Controller : MonoBehaviour
     // default functions
     void Start()
     {
-        GetWeaponManager();
+        GetManager();
     }
 
     void Update()
@@ -39,14 +41,15 @@ public class Weapon_Controller : MonoBehaviour
     }
 
     // weapon
-    private void GetWeaponManager()
+    private void GetManager()
     {
         weaponManager = GameObject.FindWithTag("Weapon_Manager").GetComponent<Weapon_Manager>();
+        playerManager = GameObject.FindWithTag("Player").GetComponent<PlayerManager>();
     }
 
     private void WeaponType()
     {
-        if (weaponManager)
+        if (weaponManager && playerManager)
         {
             StrawberryJam();
             GrapeJam();
@@ -65,7 +68,7 @@ public class Weapon_Controller : MonoBehaviour
         {
             if (coolTimer < weaponManager.weaponShootTime)
             {
-                coolTimer += Time.deltaTime * 1.0f;
+                coolTimer += Time.deltaTime * playerManager.attackSpeed;
             }
             else
             {
@@ -83,7 +86,7 @@ public class Weapon_Controller : MonoBehaviour
         {
             if (coolTimer < weaponManager.weaponShootTime)
             {
-                coolTimer += Time.deltaTime * 1.0f;
+                coolTimer += Time.deltaTime * playerManager.attackSpeed;
             }
             else
             {
@@ -101,7 +104,7 @@ public class Weapon_Controller : MonoBehaviour
         {
             if (coolTimer < weaponManager.appleJamShootTime)
             {
-                coolTimer += Time.deltaTime * 1.0f;
+                coolTimer += Time.deltaTime * playerManager.attackSpeed;
             }
             else
             {
@@ -119,7 +122,7 @@ public class Weapon_Controller : MonoBehaviour
         {
             if (coolTimer < weaponManager.weaponShootTime)
             {
-                coolTimer += Time.deltaTime * 1.0f;
+                coolTimer += Time.deltaTime * playerManager.attackSpeed;
             }
             else
             {
@@ -137,7 +140,7 @@ public class Weapon_Controller : MonoBehaviour
         {
             if (coolTimer < weaponManager.appleJamShootTime)
             {
-                coolTimer += Time.deltaTime * 1.0f;
+                coolTimer += Time.deltaTime * playerManager.attackSpeed;
             }
             else
             {

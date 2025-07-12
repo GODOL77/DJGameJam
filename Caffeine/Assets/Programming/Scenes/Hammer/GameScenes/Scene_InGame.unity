@@ -707,7 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ff27a7fef5d42f9a07f16cdb4a5e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolTimer: 0
 --- !u!1 &1534728358
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,8 +871,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 748906995}
+    - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: playerLevelDesigns.Array.data[0].L_moveSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467203896443877234, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
+      propertyPath: playerLevelDesigns.Array.data[2].L_attackSpeed
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5022446217655697181, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: m_Sprite
@@ -1072,7 +1079,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

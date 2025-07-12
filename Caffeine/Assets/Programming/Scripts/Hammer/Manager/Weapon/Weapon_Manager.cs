@@ -10,7 +10,6 @@ public class Weapon_Manager : MonoBehaviour
 
     // Public Variable //
     // weapon type
-    [Header("Weapon Type")]
     public float weaponShootTime = 0.5f;
     public float appleJamShootTime = 0.2f;
     public bool strawberryJam = false;
@@ -34,7 +33,7 @@ public class Weapon_Manager : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()

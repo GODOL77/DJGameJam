@@ -76,7 +76,8 @@ public class PlayerManager : MonoBehaviour
     // 플레이어 hp바 메서드
     public void HPBar()
     {
-        hpBar.value = currentHealth / maxHealth;
+        // float hpValue = currentHealth / maxHealth;
+        hpBar.value = (float)currentHealth / (float)maxHealth;
     }
 
     // 경험치 획득 메서드
@@ -169,7 +170,6 @@ public class PlayerManager : MonoBehaviour
 
         currentHealth -= damage;
         Debug.Log($"Player took {damage} damage. Current Health: {currentHealth}");
-        Debug.Log(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {
