@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 575753325988842582}
   - component: {fileID: 4281636328070476323}
   - component: {fileID: 3580440012336430704}
-  - component: {fileID: -7415994495411944174}
+  - component: {fileID: -4082689231325020237}
   m_Layer: 0
-  m_Name: Hp Card
+  m_Name: UpXP Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -7415994495411944174}
-        m_TargetAssemblyTypeName: UpHpCard, Assembly-CSharp
+      - m_Target: {fileID: -4082689231325020237}
+        m_TargetAssemblyTypeName: UpXPCard, Assembly-CSharp
         m_MethodName: UsingButton
         m_Mode: 1
         m_Arguments:
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-7415994495411944174
+--- !u!114 &-4082689231325020237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4922174306803202963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9429eaf2cba61f4db4f1eae3134ce61, type: 3}
+  m_Script: {fileID: 11500000, guid: 669e9bd6764af6b4db245248e5d30488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8058196958341133559
