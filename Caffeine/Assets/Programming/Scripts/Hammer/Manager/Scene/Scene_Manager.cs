@@ -26,7 +26,7 @@ public class Scene_Manager : MonoBehaviour
     }
 
     // single tone
-    void SingleTone()
+    private void SingleTone()
     {
         if (null == sceneManager)
         {
