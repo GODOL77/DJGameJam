@@ -161,7 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2773e280c34a5408a93fbf00e05781b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   lifeTime: 3
-  blueberryJamRotateSpeed: 500
+  blueberryJamRotateSpeed: 800
   homingRange: 4
+  DMG: 10

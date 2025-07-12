@@ -12,6 +12,9 @@ public class EnemyMovement : MonoBehaviour
     public GameObject experienceOrbPrefab; // 경험치 오브 프리팹
     [SerializeField] public float moveSpeed = 3f; // 이동 속도
     [SerializeField] public int attackDamage = 10;
+    public float attackCoolTime = 2.0f;
+    private bool canAttack = false;
+    private float currentAttackCoolTime = 0.0f;
     public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
 
     [Header("Red Bean Bomb Bread Settings")]
@@ -22,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform playerTarget; // 플레이어의 Transform
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트
+    private SpriteRenderer spriteRenderer; // SpriteRenderer 컴포넌트
 
 
     //public int creamEnemySpawnHealth = 5; // 분열된 크림 적의 체력
@@ -51,8 +55,8 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.LogWarning("Player GameObject with tag 'Player' not found.");
         }
-       
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // FixedUpdate is called once per physics step
@@ -60,6 +64,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if (playerTarget != null)
         {
+            // 플렝이어 기준으로 왼쪽에 있는지 오른쪽에 있는지 확인하여 이미지 flip
+            SpriteFlip();
+
             // 플레이어를 향하는 방향 벡터
             Vector2 direction = (playerTarget.position - transform.position).normalized;
             // Rigidbody2D를 사용하여 이동 (물리 충돌 처리)
@@ -79,6 +86,18 @@ public class EnemyMovement : MonoBehaviour
         {
             Die();
         }
+
+        if (canAttack)
+        {
+            if (currentAttackCoolTime < attackCoolTime)
+            {
+                currentAttackCoolTime += Time.deltaTime * 1;
+            }
+            else
+            {
+                currentAttackCoolTime = 0.0f;
+            }
+        }
     }
 
     // 다른 Collider2D와 충돌이 지속되는 동안 호출됩니다.
@@ -90,12 +109,38 @@ public class EnemyMovement : MonoBehaviour
             // PlayerManager의 TakeDamage 메서드 호출
             if (PlayerManager.Instance != null)
             {
-                PlayerManager.Instance.TakeDamage(attackDamage); // 10의 피해를 줍니다.
+                canAttack = true;
+                if (currentAttackCoolTime == 0.0f)
+                {
+                    Debug.LogError("Attack");
+                    PlayerManager.Instance.TakeDamage(attackDamage); // 10의 피해를 줍니다.
+                }
             }
             else
             {
                 Debug.LogWarning("PlayerManager Instance not found.");
             }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            canAttack = false;
+            currentAttackCoolTime = 0.0f;
+        }    
+    }
+
+    void SpriteFlip()
+    {
+        if (playerTarget.position.x > transform.position.x)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            spriteRenderer.flipX = true;
         }
     }
 

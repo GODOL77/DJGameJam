@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Weapon_Manager
   - Ground
+  - State_Manager
   layers:
   - Default
   - TransparentFX
