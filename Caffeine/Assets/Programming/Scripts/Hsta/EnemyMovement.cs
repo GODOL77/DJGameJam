@@ -17,6 +17,10 @@ public class EnemyMovement : MonoBehaviour
     private float currentAttackCoolTime = 0.0f;
     public GameObject creamEnemyPrefab; // 크림빵 분열 시 스폰할 크림 적 프리팹
     private Animator animator; // Animator 컴포넌트
+    private CircleCollider2D col; // CircleCollider2D 컴포넌트 
+    public float noDamageCoolTime = 0.2f;
+    private bool canDamage = false;
+    private float noDamageTime = 0.0f;
 
     [Header("Red Bean Bomb Bread Settings")]
     public float explosionRadius = 3.5f; // 폭발 반경
@@ -63,6 +67,12 @@ public class EnemyMovement : MonoBehaviour
             Debug.LogError("Animator component not found on Enemy!");
         }
 
+        col = GetComponent<CircleCollider2D>();
+        if (col == null)
+        {
+            Debug.LogError("CircleCollider2D component not found on Enemy!");
+        }
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -105,13 +115,23 @@ public class EnemyMovement : MonoBehaviour
                 currentAttackCoolTime = 0.0f;
             }
         }
+
+        if (noDamageTime < noDamageCoolTime)
+        {
+            noDamageTime += Time.deltaTime * 1;
+            canDamage = false;
+        }
+        else
+        {
+            canDamage = true;
+        }
     }
 
     // 다른 Collider2D와 충돌이 지속되는 동안 호출됩니다.
     void OnCollisionStay2D(Collision2D collision)
     {
         // 충돌한 오브젝트가 "Player" 태그를 가지고 있는지 확인
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && canDamage)
         {
             // PlayerManager의 TakeDamage 메서드 호출
             if (PlayerManager.Instance != null)
@@ -132,7 +152,7 @@ public class EnemyMovement : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && canDamage)
         {
             canAttack = false;
             currentAttackCoolTime = 0.0f;
@@ -153,20 +173,24 @@ public class EnemyMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (myBread == BreadType.Baguette)
+        if (canDamage)
         {
-            currentHealth -= 1;
-        }
-        else
-        {
-            currentHealth -= damage;
-        }
+            if (myBread == BreadType.Baguette)
+            {
+                currentHealth -= 1;
+            }
+            else
+            {
+                currentHealth -= damage;
+                noDamageTime = 0.0f;
+            }
 
-        Debug.Log($"Enemy took {damage} damage. Current Health: {currentHealth}");
+            Debug.Log($"Enemy took {damage} damage. Current Health: {currentHealth}");
 
-        if (currentHealth <= 0)
-        {
-            Die();
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
@@ -223,6 +247,8 @@ public class EnemyMovement : MonoBehaviour
 
         animator.SetBool("isDead?", true);
         moveSpeed = 0.0f;
+        canDamage = false;
+        col.isTrigger = true;
     }
 
     // 죽음 후 애니메이션 이벤트

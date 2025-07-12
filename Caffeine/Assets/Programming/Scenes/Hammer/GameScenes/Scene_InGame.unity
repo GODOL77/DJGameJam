@@ -447,9 +447,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponShootTime: 0.75
   appleJamShootTime: 0.3
-  strawberryJam: 1
+  strawberryJam: 0
   strawberryPrefab: {fileID: 2576253654100514836, guid: 6efdbbd94a19a46148e7ee0407941481, type: 3}
-  grapeJam: 0
+  grapeJam: 1
   grapePrefab: {fileID: 2576253654100514836, guid: a26c4c5b5f9044536a46573992fe4447, type: 3}
   appleJam: 0
   applePrefab: {fileID: 2576253654100514836, guid: 55a2f1d596d99419ebc9644196e6d73b, type: 3}
