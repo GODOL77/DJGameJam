@@ -449,13 +449,13 @@ MonoBehaviour:
   appleJamShootTime: 0.3
   strawberryJam: 0
   strawberryPrefab: {fileID: 2576253654100514836, guid: 6efdbbd94a19a46148e7ee0407941481, type: 3}
-  grapeJam: 1
+  grapeJam: 0
   grapePrefab: {fileID: 2576253654100514836, guid: a26c4c5b5f9044536a46573992fe4447, type: 3}
   appleJam: 0
   applePrefab: {fileID: 2576253654100514836, guid: 55a2f1d596d99419ebc9644196e6d73b, type: 3}
   blueberryJam: 0
   blueberryPrefab: {fileID: 2576253654100514836, guid: 741d193c6821e4aa5bf2d86a5f9ba8f4, type: 3}
-  gameJam: 0
+  gameJam: 1
   gamePrefab: {fileID: 2576253654100514836, guid: a194c005e084847318f43f0d85729960, type: 3}
 --- !u!1 &1284189782
 GameObject:
@@ -902,6 +902,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1926143849, guid: 65d0458ef4d32c84ea830bfc164b18a4, type: 3}
+    - target: {fileID: 5022446217655697181, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5659960843068518077, guid: 7f8b6596a1f970440817d509ec0fb0e7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
