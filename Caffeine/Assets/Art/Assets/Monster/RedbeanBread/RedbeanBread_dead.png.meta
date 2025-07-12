@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b4ebff7d29dffa4dad05f6f1e5dd0bc
+guid: f3b397b218aef8544ae3ab5c45505769
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Toast_dead_0
+      name: RedbeanBread_dead_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 771a12d9d13dc4824aec962455e0bc6f
-      internalID: -903598169
+      spriteID: af03655e264744fb4ad36bae320621f4
+      internalID: 210964615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_1
+      name: RedbeanBread_dead_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 119
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a569844452d314c9d8b57fbf7e186bb3
-      internalID: 540172649
+      spriteID: e0070bf46f0ee43399f9b9becdf8cdc7
+      internalID: -48111527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_2
+      name: RedbeanBread_dead_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 238
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66d7edb269b3e4bf5970dea0da7ada33
-      internalID: 1397589060
+      spriteID: 3ef3600c6ece84ea3867098023da1048
+      internalID: 1984766628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_3
+      name: RedbeanBread_dead_3
       rect:
         serializedVersion: 2
-        x: 400
+        x: 357
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2da5a618c048c4d69a111b2c9b3a4936
-      internalID: 1377692194
+      spriteID: de33d80609a3644bfb1dfb29a1d400a2
+      internalID: -118552280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_4
+      name: RedbeanBread_dead_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 476
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebccf78e7f4bf4cd883c5a2e16f78d31
-      internalID: -1692219408
+      spriteID: c20de2222b9f047e0a5a92a1ad2bcaa2
+      internalID: -1358472636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_5
+      name: RedbeanBread_dead_5
       rect:
         serializedVersion: 2
-        x: 600
+        x: 595
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f65c1cf7ed36449478daaf7bbfb08fd4
-      internalID: -166230851
+      spriteID: e06fb693e7ec04fe9984ad25caff17fd
+      internalID: 932803281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_6
+      name: RedbeanBread_dead_6
       rect:
         serializedVersion: 2
-        x: 700
+        x: 833
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7672b007275e416eb322c0e3d420f81
-      internalID: 1895139997
+      spriteID: 79b5cd4a96c2f486cbd99fbd9c8ac739
+      internalID: -1564516761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_7
+      name: RedbeanBread_dead_7
       rect:
         serializedVersion: 2
-        x: 800
+        x: 952
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4c350ca22f544a8d858db0be18959a5
-      internalID: 1401579946
+      spriteID: 73325c88229db448299630300e7472f4
+      internalID: -1208289285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_8
+      name: RedbeanBread_dead_8
       rect:
         serializedVersion: 2
-        x: 900
+        x: 1071
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a94cda7928445ce95667b32d8af217
-      internalID: 867005430
+      spriteID: 8b7023700014c4a94b45f7d247d8e1e1
+      internalID: 1340484648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_9
+      name: RedbeanBread_dead_9
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1190
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9601fd67ba3c94e32bcc3c462ab5231e
-      internalID: 840384358
+      spriteID: 988d314d327d84fdfb45887931a5d24d
+      internalID: 910071550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_10
+      name: RedbeanBread_dead_10
       rect:
         serializedVersion: 2
-        x: 1100
+        x: 1309
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1a629e3825244d8281352073d3ba362
-      internalID: 1276960291
+      spriteID: d57f6922735cc4aa0b0a68f17eeb24f7
+      internalID: -888899927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_11
+      name: RedbeanBread_dead_11
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1428
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af552963aa0674616a8e06a30a8966ae
-      internalID: -538264922
+      spriteID: 6cc0c72b5b55f446791fb4562c2f93ff
+      internalID: -2090972790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast_dead_12
+      name: RedbeanBread_dead_12
       rect:
         serializedVersion: 2
-        x: 1300
+        x: 1547
         y: 0
-        width: 100
-        height: 100
+        width: 119
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,8 +363,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e47c471685cc466d83f878d2b00c047
-      internalID: 1503144008
+      spriteID: 38e1c0592f5e7400c9745d8591f67566
+      internalID: 1685765616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_dead_13
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0457023c85ee413b861e75f5b7880bd
+      internalID: 1694831888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_dead_14
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04b430c6a48e4737ba985a53a98573c
+      internalID: -1231617209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedbeanBread_dead_15
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 0
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c7a59e0b00b476e83a770f67b8c3cd
+      internalID: 1323297084
       vertices: []
       indices: 
       edges: []
@@ -380,19 +443,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Toast_dead_0: -903598169
-      Toast_dead_1: 540172649
-      Toast_dead_10: 1276960291
-      Toast_dead_11: -538264922
-      Toast_dead_12: 1503144008
-      Toast_dead_2: 1397589060
-      Toast_dead_3: 1377692194
-      Toast_dead_4: -1692219408
-      Toast_dead_5: -166230851
-      Toast_dead_6: 1895139997
-      Toast_dead_7: 1401579946
-      Toast_dead_8: 867005430
-      Toast_dead_9: 840384358
+      RedbeanBread_dead_0: 210964615
+      RedbeanBread_dead_1: -48111527
+      RedbeanBread_dead_10: -888899927
+      RedbeanBread_dead_11: -2090972790
+      RedbeanBread_dead_12: 1685765616
+      RedbeanBread_dead_13: 1694831888
+      RedbeanBread_dead_14: -1231617209
+      RedbeanBread_dead_15: 1323297084
+      RedbeanBread_dead_2: 1984766628
+      RedbeanBread_dead_3: -118552280
+      RedbeanBread_dead_4: -1358472636
+      RedbeanBread_dead_5: 932803281
+      RedbeanBread_dead_6: -1564516761
+      RedbeanBread_dead_7: -1208289285
+      RedbeanBread_dead_8: 1340484648
+      RedbeanBread_dead_9: 910071550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
