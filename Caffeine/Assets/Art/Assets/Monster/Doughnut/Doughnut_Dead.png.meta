@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ca535a2c40370e458fc53eb7b9d541f
+guid: 045fdecbde7954d7d86c1faac04c5838
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cream_dead_0
+      name: Doughnut_Dead_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f60cf4cb47e47421d96d2888f28a6df9
-      internalID: 1412234449
+      spriteID: d293f19d9e5fc44ae8c5c4214bdd92a3
+      internalID: 1971380962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_1
+      name: Doughnut_Dead_1
       rect:
         serializedVersion: 2
-        x: 147
+        x: 100
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +132,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbe3d278c8a3946fb863edbc7019b3d8
-      internalID: -766883371
+      spriteID: e89990457663f446596f87122d541945
+      internalID: 377558970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_2
+      name: Doughnut_Dead_2
       rect:
         serializedVersion: 2
-        x: 294
+        x: 200
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d344c35399b4ca68baf7d5910accd5
-      internalID: 2056418382
+      spriteID: 22d39a70780b94e178ab4ae93136c021
+      internalID: -1029262187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_3
+      name: Doughnut_Dead_3
       rect:
         serializedVersion: 2
-        x: 441
+        x: 400
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e79173905e644a13aa0eb1febcca957
-      internalID: 2013561173
+      spriteID: 1f6942f77a6944d288156727149d0009
+      internalID: 232190803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_4
+      name: Doughnut_Dead_4
       rect:
         serializedVersion: 2
-        x: 735
+        x: 500
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,19 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72a6968a00c4749fbbf2ddae4b7d9aa5
-      internalID: -1522338176
+      spriteID: 84d2a6ca673844e89b961018f39d024d
+      internalID: -1228445620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_5
+      name: Doughnut_Dead_5
       rect:
         serializedVersion: 2
-        x: 882
+        x: 600
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -216,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f34c83fa265cf4cecbf4fa3ec7459c66
-      internalID: -1823355695
+      spriteID: 807fa7a204816496e976762b9ac3ff11
+      internalID: -342250953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_6
+      name: Doughnut_Dead_6
       rect:
         serializedVersion: 2
-        x: 1029
+        x: 700
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740376281b4b44060b8dfcdcaa3369ec
-      internalID: -692212928
+      spriteID: 15bd771bfebcd45baa18c0bff67e2c75
+      internalID: -2100199025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_7
+      name: Doughnut_Dead_7
       rect:
         serializedVersion: 2
-        x: 1176
+        x: 800
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -258,19 +258,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 714d808c4143947c6a71bc7cb9983ee5
-      internalID: -583203190
+      spriteID: 2afb154f02606448daa060a70243ff8d
+      internalID: -1957934765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_8
+      name: Doughnut_Dead_8
       rect:
         serializedVersion: 2
-        x: 1323
+        x: 900
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -279,19 +279,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fba4f99c8bb1c48c6b923a0e2e402cdd
-      internalID: -465144441
+      spriteID: 8f9d8a611a6ec4cfe933865ab2595659
+      internalID: 992121876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_9
+      name: Doughnut_Dead_9
       rect:
         serializedVersion: 2
-        x: 1470
+        x: 1000
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -300,19 +300,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770e6e2586a0e4440aa79e76096a8178
-      internalID: -75770773
+      spriteID: d76a477decdaa42eeaeda0168741b6f5
+      internalID: -1070097735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cream_dead_10
+      name: Doughnut_Dead_10
       rect:
         serializedVersion: 2
-        x: 1617
+        x: 1100
         y: 0
-        width: 147
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -321,8 +321,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff594c0d099454af48878109ca03e263
-      internalID: -1307660149
+      spriteID: c66ee3e1f879a4febbf13015759aeeeb
+      internalID: -2055292629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doughnut_Dead_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d9ac2193a0a4809adb356badb84fc2
+      internalID: 1068074251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doughnut_Dead_12
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ba07e8dadb546bbaa1c73597f8c203
+      internalID: -1824563642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doughnut_Dead_13
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953b2caca14884097838becfce633cd5
+      internalID: 1119451496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doughnut_Dead_14
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a52073dccc5e4934803e1194ecfb41a
+      internalID: -1038724757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doughnut_Dead_15
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74852e5026bcb48958ec7a1e71bfdab4
+      internalID: 372443319
       vertices: []
       indices: 
       edges: []
@@ -338,17 +443,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cream_dead_0: 1412234449
-      Cream_dead_1: -766883371
-      Cream_dead_10: -1307660149
-      Cream_dead_2: 2056418382
-      Cream_dead_3: 2013561173
-      Cream_dead_4: -1522338176
-      Cream_dead_5: -1823355695
-      Cream_dead_6: -692212928
-      Cream_dead_7: -583203190
-      Cream_dead_8: -465144441
-      Cream_dead_9: -75770773
+      Doughnut_Dead_0: 1971380962
+      Doughnut_Dead_1: 377558970
+      Doughnut_Dead_10: -2055292629
+      Doughnut_Dead_11: 1068074251
+      Doughnut_Dead_12: -1824563642
+      Doughnut_Dead_13: 1119451496
+      Doughnut_Dead_14: -1038724757
+      Doughnut_Dead_15: 372443319
+      Doughnut_Dead_2: -1029262187
+      Doughnut_Dead_3: 232190803
+      Doughnut_Dead_4: -1228445620
+      Doughnut_Dead_5: -342250953
+      Doughnut_Dead_6: -2100199025
+      Doughnut_Dead_7: -1957934765
+      Doughnut_Dead_8: 992121876
+      Doughnut_Dead_9: -1070097735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
