@@ -20,14 +20,14 @@ public class PlayerManager : MonoBehaviour
     public List<playerLevelDesign> playerLevelDesigns = new List<playerLevelDesign>(); // Initialize to prevent NullReferenceException
     public static PlayerManager Instance { get; private set; }
 
-    public int maxHealth; // Initialized by level design
-    public int currentHealth; // Initialized by level design
-    public int attackDamage; // Initialized by level design
+    public int maxHealth= 100; // Initialized by level design
+    public int currentHealth =0; // Initialized by level design
+    public int attackDamage=20; // Initialized by level design
     public int playerXP = 0;
-    public int xpToNextLevel;
+    public int xpToNextLevel=150;
     public int plusXP = 0;
-    public float attackSpeed; // This stat is not in playerLevelDesign, so keep it as is
-    public float moveSpeed; // Initialized by level design
+    public float attackSpeed=1; // This stat is not in playerLevelDesign, so keep it as is
+    public float moveSpeed=1; // Initialized by level design
 
     public int playerLevel = 1; // Current player level
 
@@ -52,7 +52,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         // Initialize player stats based on level 1 design
-        ApplyLevelDesign(playerLevel);
+        //ApplyLevelDesign(playerLevel);
         currentHealth = maxHealth; // Set current health to max health after applying design
         Debug.Log($"Player Health: {currentHealth}");
     }
@@ -135,7 +135,7 @@ public class PlayerManager : MonoBehaviour
 
         Debug.Log($"Player Leveled Up! New Level: {playerLevel}");
 
-        ApplyLevelDesign(playerLevel); // Apply new level's stats
+        ApplyLevelDesign(); // Apply new level's stats
         currentHealth = maxHealth; // Restore health on level up
 
         // TemporaryCardSpawner 활성화
@@ -174,6 +174,29 @@ public class PlayerManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"PlayerLevelDesign for level {level} not found. Stats not updated.");
+        }
+    }
+
+    private void ApplyLevelDesign()
+    {
+        if (playerLevelDesigns == null || playerLevelDesigns.Count == 0)
+        {
+            Debug.LogWarning("PlayerLevelDesigns list is empty or null. Please populate it in the Inspector.");
+            return;
+        }
+
+        
+
+        
+        {
+            maxHealth += 20;
+            attackDamage += 5;
+            moveSpeed += 0.1f;
+            attackSpeed += 0.2f;
+            xpToNextLevel = (int)(xpToNextLevel*1.5f);
+            // xpToNextLevel is now read directly in GainXP, no need to store it as a separate member variable
+        }  
+        {
         }
     }
 
