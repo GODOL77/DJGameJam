@@ -37,7 +37,7 @@ public class Weapon_Controller : MonoBehaviour
         Vector3 direction = targetPosition - transform.position;
         direction.z = 0;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     // weapon
@@ -110,7 +110,7 @@ public class Weapon_Controller : MonoBehaviour
             {
                 if (weaponManager.applePrefab)
                 {
-                    Instantiate(weaponManager.grapePrefab, transform.position, transform.rotation);
+                    Instantiate(weaponManager.applePrefab, transform.position, transform.rotation);
                 }
                 coolTimer = 0.0f;
             }
@@ -128,7 +128,7 @@ public class Weapon_Controller : MonoBehaviour
             {
                 if (weaponManager.blueberryPrefab)
                 {
-                    Instantiate(weaponManager.grapePrefab, transform.position, transform.rotation);
+                    Instantiate(weaponManager.blueberryPrefab, transform.position, transform.rotation);
                 }
                 coolTimer = 0.0f;
             }

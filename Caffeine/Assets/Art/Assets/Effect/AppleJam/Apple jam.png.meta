@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b528bc56774b4849945898bdeddac23
+guid: 7dd558043341e734aae769a79c7360a1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game jam_0
+      name: Apple jam_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb427cef3ebf54777b1d6e917442fcf0
-      internalID: 819444796
+      spriteID: 8777e0c33048c40ca8d5b9e051c96a97
+      internalID: -448876860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_1
+      name: Apple jam_1
       rect:
         serializedVersion: 2
         x: 100
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914c017f1a91b4a878a866651f4a6b87
-      internalID: 595046150
+      spriteID: c2cb09b97549e43a7b5de0866e8aec96
+      internalID: 900418718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_2
+      name: Apple jam_2
       rect:
         serializedVersion: 2
         x: 200
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83a4445fc164a41ae981ae5120131f8f
-      internalID: -342090656
+      spriteID: 5081d3f8abc75435ca8c805b4f015c3b
+      internalID: 1909012099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_3
+      name: Apple jam_3
       rect:
         serializedVersion: 2
         x: 300
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71a0ef73e15ca4ccf9803200230fdda3
-      internalID: 2000586596
+      spriteID: 1a999d6c017734b8591e769ccc2dcb31
+      internalID: 2044660432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_4
+      name: Apple jam_4
       rect:
         serializedVersion: 2
         x: 400
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38277d5b936444582803107305824588
-      internalID: -880935068
+      spriteID: b6bf57cd505424749924c550bacf8d91
+      internalID: 766735124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_5
+      name: Apple jam_5
       rect:
         serializedVersion: 2
         x: 500
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cd9215fef4cd4af282a1f352d9f8994
-      internalID: 1693410264
+      spriteID: c2c9352ebb9b94184932684c47aa265a
+      internalID: 2102806647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_6
+      name: Apple jam_6
       rect:
         serializedVersion: 2
         x: 600
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdb2b07377a9546cca6c6877bfaf5ec7
-      internalID: 153082607
+      spriteID: 4157a9e2741ca4e7495a2279b338dc33
+      internalID: -1103700884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game jam_7
+      name: Apple jam_7
       rect:
         serializedVersion: 2
         x: 700
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b9630349a7bd4349b9b5d0879769deb
-      internalID: 1198681763
+      spriteID: e05abcc8e1c624cd6a1380fa89ebd1b1
+      internalID: 252722382
       vertices: []
       indices: 
       edges: []
@@ -275,14 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Game jam_0: 819444796
-      Game jam_1: 595046150
-      Game jam_2: -342090656
-      Game jam_3: 2000586596
-      Game jam_4: -880935068
-      Game jam_5: 1693410264
-      Game jam_6: 153082607
-      Game jam_7: 1198681763
+      Apple jam_0: -448876860
+      Apple jam_1: 900418718
+      Apple jam_2: 1909012099
+      Apple jam_3: 2044660432
+      Apple jam_4: 766735124
+      Apple jam_5: 2102806647
+      Apple jam_6: -1103700884
+      Apple jam_7: 252722382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

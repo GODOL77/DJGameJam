@@ -82,6 +82,7 @@ public class PlayerManager : MonoBehaviour
         if (hpBar != null)
         {
             hpBar.value = (float)currentHealth / (float)maxHealth;
+            hpBar.transform.localScale = new Vector3(maxHealth / 100, 1.0f, 1.0f);
         }
         else
         {

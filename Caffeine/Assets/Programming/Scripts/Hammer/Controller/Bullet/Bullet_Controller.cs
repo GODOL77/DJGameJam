@@ -63,20 +63,20 @@ public class Bullet_Controller : MonoBehaviour
             if (target == null || Vector2.Distance(transform.position, target.position) > homingRange)
             {
                 rigid.angularVelocity = 0f;
-                rigid.velocity = transform.up * speed;
+                rigid.velocity = transform.right * speed;
                 BlueberryJamFindEnemy();
                 return;
             }
 
             Vector2 direction = ((Vector2)target.position - rigid.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            angle = Vector3.Cross(transform.up, direction).z;
+            angle = Vector3.Cross(transform.right, direction).z;
             rigid.angularVelocity = angle * blueberryJamRotateSpeed;
-            rigid.velocity = transform.up * speed;
+            rigid.velocity = transform.right * speed;
         }
         else
         {
-            rigid.velocity = transform.up * speed;
+            rigid.velocity = transform.right * speed;
         }
     }
 

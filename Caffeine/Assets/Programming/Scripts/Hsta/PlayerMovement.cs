@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 8f;
     private Animator animator; // Animator 컴포넌트
     private SpriteRenderer spriteRenderer; // SpriteRenderer 컴포넌트
+    public Vector2 moveDirection = new Vector2(0, 0);
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");   // W/S 또는 위/아래 화살표
 
         // 이동 방향 벡터 계산
-        Vector2 moveDirection = new Vector2(moveX, moveY).normalized; // 대각선 이동 시 속도 일정하게 유지
+        moveDirection = new Vector2(moveX, moveY).normalized; // 대각선 이동 시 속도 일정하게 유지
 
         if (moveDirection != Vector2.zero)
         {
