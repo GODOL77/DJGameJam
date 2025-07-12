@@ -76,6 +76,11 @@ public class Missile : MonoBehaviour
     // 미사일이 다른 물체와 충돌했을 경우 (예: 벽)
     void OnCollisionEnter2D(Collision2D collision)
     {
-        SpawnToastAndDestroy();
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SpawnToastAndDestroy();
+            PlayerManager.Instance.TakeDamage(15);
+        }
+        
     }
 }
