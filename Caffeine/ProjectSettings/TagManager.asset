@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - State_Manager
   - Area
+  - GameManager
+  - Boss_Spawner
   layers:
   - Default
   - TransparentFX

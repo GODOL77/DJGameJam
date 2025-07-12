@@ -1252,7 +1252,7 @@ GameObject:
   - component: {fileID: 794345935}
   m_Layer: 0
   m_Name: Game Manager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,7 +1285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1166706937}
-  startTime: 300
+  startTime: 15
+  isRunning: 1
 --- !u!1001 &864660797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1297,6 +1298,14 @@ PrefabInstance:
     - target: {fileID: 2654826019380716183, guid: b78c2d43928455a4a9d0ebace6288eba, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580777592271896061, guid: b78c2d43928455a4a9d0ebace6288eba, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1446810558}
+    - target: {fileID: 6580777592271896061, guid: b78c2d43928455a4a9d0ebace6288eba, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9119750437194413579, guid: b78c2d43928455a4a9d0ebace6288eba, type: 3}
       propertyPath: m_Pivot.x
@@ -2175,8 +2184,57 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 15649803}
+  - {fileID: 1312256157}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1312256156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312256157}
+  - component: {fileID: 1312256158}
+  m_Layer: 0
+  m_Name: Boss Spawner
+  m_TagString: Boss_Spawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1312256157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312256156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1284189783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1312256158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312256156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50bdf2e2cd814af59d7efa16b63afde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossMonsters:
+  - {fileID: 1917943071027196400, guid: 333a08f387904c1458946bddfe789fdf, type: 3}
+  - {fileID: 6237964983722388263, guid: 24fcb5e0d02587d43b23117e02b7c7b8, type: 3}
+  spawnRadius: 5
 --- !u!1 &1395244271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,7 +2287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.37388456, g: 0.0069419593, b: 0.49056602, a: 1}
+  m_Color: {r: 0.51507664, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2380,8 +2438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBAA8\uB4E0 \uC7BC\uC758 \uB2A5\uB825\uC744 \uAC00\uC9C0\uACE0 \uC788\uB294
-    \uC7BC"
+  m_Text: "\uBAA8\uB4E0 \uC7BC\uC758 \uB2A5\uB825\uC744 \uAC00\uC9C4 \uC7BC"
 --- !u!222 &1399052236
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4133,7 +4190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC544\uBB34 \uB2A5\uB825\uC774 \uC5C6\uB294 \uAE30\uBCF8 "
+  m_Text: "\uC544\uBB34 \uB2A5\uB825\uC774 \uC5C6\uB294 \uAE30\uBCF8 \uC7BC"
 --- !u!222 &1833948272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4803,8 +4860,8 @@ Canvas:
   m_GameObject: {fileID: 2032704441}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1446810558}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

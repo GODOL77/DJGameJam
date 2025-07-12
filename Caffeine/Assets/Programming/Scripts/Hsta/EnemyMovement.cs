@@ -73,6 +73,12 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("CircleCollider2D component not found on Enenmy!");
         }
 
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.Log("GameManager component not found on Enemy!");
+        }
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         canDamage = true;
     }
@@ -116,6 +122,10 @@ public class EnemyMovement : MonoBehaviour
             {
                 currentAttackCoolTime = 0.0f;
             }
+        }
+        if (!gameManager.isRunning && gameManager.isEnemyDead)
+        {
+            Die();
         }
     }
 
@@ -166,7 +176,7 @@ public class EnemyMovement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         spriteRenderer.color = new Color(1,0,0,1);
-        Invoke("ResetColor", 0.5f);
+        Invoke("ResetColor", 0.3f);
 
         if (myBread == BreadType.Baguette)
         {
@@ -201,12 +211,12 @@ public class EnemyMovement : MonoBehaviour
     {
         Debug.Log("Enemy Died!");
 
-        // // 단팥폭탄빵일 경우 즉시 폭발
-        // if (myBread == BreadType.RedBeanBombBread)
-        // {
-        //     Explode();
-        //     return; // 폭발 후에는 일반적인 파괴 로직을 건너뜁니다.
-        // }
+        // 단팥폭탄빵일 경우 즉시 폭발
+        if (myBread == BreadType.RedBeanBombBread)
+        {
+            Explode();
+            return; // 폭발 후에는 일반적인 파괴 로직을 건너뜁니다.
+        }
 
         // 경험치 오브 드롭
         if (experienceOrbPrefab != null)

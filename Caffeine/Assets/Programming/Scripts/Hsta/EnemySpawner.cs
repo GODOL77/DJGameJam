@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
     private Transform playerTransform; // 플레이어의 Transform
     private List<GameObject> spawnedEnemies = new List<GameObject>(); // 스폰된 적 목록
+    private GameManager gameManager;
 
     void Start()
     {
@@ -28,8 +29,14 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.Log("Game Manager component not found on Enemy Spawner!");
+        }
+
         // 초기 지연 후 적 스폰 코루틴 시작
-        StartCoroutine(SpawnEnemiesRoutine());
+            StartCoroutine(SpawnEnemiesRoutine());
     }
 
     IEnumerator SpawnEnemiesRoutine()
@@ -51,19 +58,22 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnSingleEnemy()
     {
-        if (playerTransform == null || enemyPrefabs.Length == 0) return;
+        if (gameManager.isRunning)
+        {
+            if (playerTransform == null || enemyPrefabs.Length == 0) return;
 
-        // 플레이어 주변 랜덤 위치 계산
-        Vector2 randomOffset = Random.insideUnitCircle.normalized * spawnRadius;
-        Vector3 spawnPosition = playerTransform.position + (Vector3)randomOffset;
+            // 플레이어 주변 랜덤 위치 계산
+            Vector2 randomOffset = Random.insideUnitCircle.normalized * spawnRadius;
+            Vector3 spawnPosition = playerTransform.position + (Vector3)randomOffset;
 
-        // 랜덤 적 프리팹 선택
-        GameObject enemyToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+            // 랜덤 적 프리팹 선택
+            GameObject enemyToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
-        // 적 스폰
-        GameObject newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
-        spawnedEnemies.Add(newEnemy);
-        Debug.Log($"Spawned {newEnemy.name} at {spawnPosition}");
+            // 적 스폰
+            GameObject newEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+            spawnedEnemies.Add(newEnemy);
+            Debug.Log($"Spawned {newEnemy.name} at {spawnPosition}");
+        }
     }
 
     // 파괴된 적을 spawnedEnemies 목록에서 제거
