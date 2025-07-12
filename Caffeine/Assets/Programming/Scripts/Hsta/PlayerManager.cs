@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance { get; private set; }
 
     public int maxHealth= 100; // Initialized by level design
-    public int currentHealth =0; // Initialized by level design
+    public int currentHealth; // Initialized by level design
     public int attackDamage=20; // Initialized by level design
     public int playerXP = 0;
     public int xpToNextLevel=150;
@@ -61,11 +61,12 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-         maxHealth = 100;
-            attackDamage = 20;
-            moveSpeed = 1f;
-            attackSpeed = 1f;
-            xpToNextLevel = 150;
+        maxHealth = 100;
+        attackDamage = 20;
+        moveSpeed = 1f;
+        attackSpeed = 1f;
+        xpToNextLevel = 150;
+            HPBar();
     }
 
     // Update is called once per frame
