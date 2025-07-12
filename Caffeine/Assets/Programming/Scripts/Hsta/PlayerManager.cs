@@ -53,14 +53,19 @@ public class PlayerManager : MonoBehaviour
 
         // Initialize player stats based on level 1 design
         //ApplyLevelDesign(playerLevel);
-        currentHealth = maxHealth; // Set current health to max health after applying design
+        //currentHealth = maxHealth; // Set current health to max health after applying design
         Debug.Log($"Player Health: {currentHealth}");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        currentHealth = maxHealth;
+         maxHealth = 100;
+            attackDamage = 20;
+            moveSpeed = 1f;
+            attackSpeed = 1f;
+            xpToNextLevel = 150;
     }
 
     // Update is called once per frame
