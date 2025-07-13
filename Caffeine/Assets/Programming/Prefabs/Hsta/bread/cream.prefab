@@ -163,12 +163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myBread: 3
-  maxHealth: 10
+  maxHealth: 120
   currentHealth: 0
-  dropXP: 10
+  dropXP: 25
   experienceOrbPrefab: {fileID: 1727987041099687454, guid: 68ee634152be70c4cbce195a91b65e01, type: 3}
-  moveSpeed: 3
-  attackDamage: 10
+  moveSpeed: 2.4
+  attackDamage: 35
   attackCoolTime: 2
   creamEnemyPrefab: {fileID: 7985619342473693220, guid: 1ea27702e87dcdd42a57d2ed9cf0b02f, type: 3}
   explosionRadius: 2

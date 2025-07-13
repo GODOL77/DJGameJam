@@ -165,10 +165,10 @@ MonoBehaviour:
   myBread: 2
   maxHealth: 10
   currentHealth: 0
-  dropXP: 10
+  dropXP: 12
   experienceOrbPrefab: {fileID: 1727987041099687454, guid: 68ee634152be70c4cbce195a91b65e01, type: 3}
-  moveSpeed: 3
-  attackDamage: 10
+  moveSpeed: 1.8
+  attackDamage: 50
   attackCoolTime: 2
   creamEnemyPrefab: {fileID: 0}
   explosionRadius: 2
