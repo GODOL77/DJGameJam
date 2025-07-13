@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56d4afec3aa181446a75ec813386e8e7
+guid: 1df4a1813e15c434aa4c5ea2ec157052
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_0
+      name: choose_ExpMag_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef2bea853f93451089b6e3c71d0f8b6
-      internalID: -1042474839
+      spriteID: 093468183ccf74f31a42c86911cf9849
+      internalID: -891503025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_1
+      name: choose_ExpMag_1
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35186c4f6e6794951ab2fa3db42ee9bc
-      internalID: -30709177
+      spriteID: db4ae9eaaf6b844ed8cbbf8dfce1cdc0
+      internalID: -105465907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_2
+      name: choose_ExpMag_2
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e3a8fc7f9e24ba592bea94a1f531e0
-      internalID: -1376110766
+      spriteID: cc2b41e32f6d8405c96b91645dd64a7e
+      internalID: 1227131927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_3
+      name: choose_ExpMag_3
       rect:
         serializedVersion: 2
         x: 600
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397dccfca76cd484ba627dd6f9daa703
-      internalID: -1147389307
+      spriteID: e02c15128c71c44dda05ae5e7535b619
+      internalID: 678501016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_4
+      name: choose_ExpMag_4
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29225942fb40e45a2890c46e7c623092
-      internalID: -1093373712
+      spriteID: e38e51d7076b2488db52d7a368aba86c
+      internalID: 1963887745
       vertices: []
       indices: 
       edges: []
@@ -212,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SUNGSIMDANG_Move_0: -1042474839
-      SUNGSIMDANG_Move_1: -30709177
-      SUNGSIMDANG_Move_2: -1376110766
-      SUNGSIMDANG_Move_3: -1147389307
-      SUNGSIMDANG_Move_4: -1093373712
+      choose_ExpMag_0: -891503025
+      choose_ExpMag_1: -105465907
+      choose_ExpMag_2: 1227131927
+      choose_ExpMag_3: 678501016
+      choose_ExpMag_4: 1963887745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,7 +9,7 @@ public class SettingsMenu : MonoBehaviour
     public Slider musicVolumeSlider;
     public Slider sfxVolumeSlider;
 
-    void Start()
+    void OnEnable()
     {
         // Load saved volume settings or set default
         masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
@@ -19,6 +19,17 @@ public class SettingsMenu : MonoBehaviour
         SetMasterVolume(masterVolumeSlider.value);
         SetMusicVolume(musicVolumeSlider.value);
         SetSFXVolume(sfxVolumeSlider.value);
+
+        masterVolumeSlider.onValueChanged.AddListener(SetMasterVolume);
+        musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxVolumeSlider.onValueChanged.AddListener(SetSFXVolume);
+    }
+
+    void OnDisable()
+    {
+        masterVolumeSlider.onValueChanged.RemoveListener(SetMasterVolume);
+        musicVolumeSlider.onValueChanged.RemoveListener(SetMusicVolume);
+        sfxVolumeSlider.onValueChanged.RemoveListener(SetSFXVolume);
     }
 
     public void SetMasterVolume(float volume)

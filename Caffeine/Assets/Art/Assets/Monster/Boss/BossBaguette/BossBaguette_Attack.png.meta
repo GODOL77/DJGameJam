@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aefbeec89c59d6045b6aacc3d80a9c58
+guid: f9b694bfe77244b86a4976b2637e56e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_0
+      name: BossBaguette_Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b6a9c27ef87e4e2585e82cf9056ba52
-      internalID: 650622619
+      spriteID: 9c7f84ddfcc85442489916328c07f828
+      internalID: -1533031178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_1
+      name: BossBaguette_Attack_1
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1270c32fb6c411ea41b67de361ee7c
-      internalID: -843837201
+      spriteID: 2065e5c109e4a4f1eb21413a81070f52
+      internalID: -1290526060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_2
+      name: BossBaguette_Attack_2
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3056a4c3f260b47c5a5e370a772ef4df
-      internalID: -212459234
+      spriteID: 6d8416c612c1c420fbc43ceedc25a0fa
+      internalID: 537486481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_3
+      name: BossBaguette_Attack_3
       rect:
         serializedVersion: 2
         x: 600
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d90277189d151455ca9db4a0d8e9ce35
-      internalID: -1627949423
+      spriteID: 3e101e9431c584b2f9d739c9868bb295
+      internalID: -2125961929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_4
+      name: BossBaguette_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dbb7e48af5d46208c491fe29b03dd1
+      internalID: 785215915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Attack_5
       rect:
         serializedVersion: 2
         x: 1000
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4074d165abc9b463f837631162d4569a
-      internalID: -1545690685
+      spriteID: 059c814b4a5414796802fd6a5ec46a09
+      internalID: -498280737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_5
+      name: BossBaguette_Attack_6
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff1a2111a69c94da283d500af2581e8d
-      internalID: -670082252
+      spriteID: 5b318f25ea6514144a367ee9f627c272
+      internalID: 1190431652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_6
+      name: BossBaguette_Attack_7
       rect:
         serializedVersion: 2
         x: 1400
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37910a2f5d64c4e25a9d035c6fd50a53
-      internalID: 2076125509
+      spriteID: 2363ee7c4b7d24e659d3e7f47ea20c39
+      internalID: -1499809680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_7
+      name: BossBaguette_Attack_8
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,113 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09efaadf6ad7a42eab10b14b3f46d815
-      internalID: -424044793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SUNGSIMDANG_dead_8
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 0
-        width: 200
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aa26532ac57141368a4dedbd3b7e756
-      internalID: -1380037335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SUNGSIMDANG_dead_9
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 200
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96a74458de4854f0aba5532b9049baf4
-      internalID: -1182451725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SUNGSIMDANG_dead_10
-      rect:
-        serializedVersion: 2
-        x: 2200
-        y: 0
-        width: 200
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9d354684973b49cd947dedf09c3198e
-      internalID: 2135575956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SUNGSIMDANG_dead_11
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 200
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da6eae7b924d84ab99e4a897dbb20afe
-      internalID: 1863312408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SUNGSIMDANG_dead_12
-      rect:
-        serializedVersion: 2
-        x: 2600
-        y: 0
-        width: 200
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa5174d7599af4b6cbff624bec218bef
-      internalID: -1611212091
+      spriteID: 9f9b0e57f163e4cb98fc59d8af6ee5b3
+      internalID: 1624884549
       vertices: []
       indices: 
       edges: []
@@ -380,19 +296,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SUNGSIMDANG_dead_0: 650622619
-      SUNGSIMDANG_dead_1: -843837201
-      SUNGSIMDANG_dead_10: 2135575956
-      SUNGSIMDANG_dead_11: 1863312408
-      SUNGSIMDANG_dead_12: -1611212091
-      SUNGSIMDANG_dead_2: -212459234
-      SUNGSIMDANG_dead_3: -1627949423
-      SUNGSIMDANG_dead_4: -1545690685
-      SUNGSIMDANG_dead_5: -670082252
-      SUNGSIMDANG_dead_6: 2076125509
-      SUNGSIMDANG_dead_7: -424044793
-      SUNGSIMDANG_dead_8: -1380037335
-      SUNGSIMDANG_dead_9: -1182451725
+      BossBaguette_Attack_0: -1533031178
+      BossBaguette_Attack_1: -1290526060
+      BossBaguette_Attack_2: 537486481
+      BossBaguette_Attack_3: -2125961929
+      BossBaguette_Attack_4: 785215915
+      BossBaguette_Attack_5: -498280737
+      BossBaguette_Attack_6: 1190431652
+      BossBaguette_Attack_7: -1499809680
+      BossBaguette_Attack_8: 1624884549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

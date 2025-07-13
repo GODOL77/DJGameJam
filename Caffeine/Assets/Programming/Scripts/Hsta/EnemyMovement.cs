@@ -123,10 +123,6 @@ public class EnemyMovement : MonoBehaviour
                 currentAttackCoolTime = 0.0f;
             }
         }
-        if (!gameManager.isRunning && gameManager.isEnemyDead)
-        {
-            Die();
-        }
     }
 
     // 다른 Collider2D와 충돌이 지속되는 동안 호출됩니다.
@@ -207,7 +203,7 @@ public class EnemyMovement : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
-    void Die()
+    public void Die()
     {
         Debug.Log("Enemy Died!");
 
