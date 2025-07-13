@@ -75,11 +75,11 @@ public class PlayerManager : MonoBehaviour
     {
         HPBar();
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Debug.Log("q 키가 눌렸습니다!");
-            GainXP(50);
-        }
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     Debug.Log("q 키가 눌렸습니다!");
+        //     GainXP(50);
+        // }
     }
 
     // 플레이어 hp바 메서드
@@ -228,14 +228,15 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Player Died!");
             if (SceneManager.GetActiveScene().name == "Scene_tuto")
             {
-                 if (PlayerManager.Instance != null)
-        {
-            Destroy(PlayerManager.Instance.gameObject);
-        }
+                if (PlayerManager.Instance != null)
+                {
+                    Destroy(PlayerManager.Instance.gameObject);
+                }
                 SceneManager.LoadScene("Scene_InGame");
             }
             if (SceneManager.GetActiveScene().name == "Scene_InGame")
             {
+                //this.gameObject.SetActive(false);
                 SceneManager.LoadScene("Scene_End");
             }
             // TODO: 게임 오버 처리 (예: 게임 재시작, UI 표시 등)

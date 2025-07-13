@@ -107,10 +107,10 @@ public class EnemyMovement : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Die();
-        }
+        // if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     Die();
+        // }
 
         if (canAttack)
         {
