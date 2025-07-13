@@ -22,7 +22,30 @@ public class Scene_Manager : MonoBehaviour
     // system Functions
     public void StartGameScene()
     {
-        SceneManager.LoadScene("Scene_InGame");
+        SceneManager.LoadScene("Scene_tuto");
+    }
+
+    public void TitleScene()
+    {
+        SceneManager.LoadScene("Scene_Start");
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+
+        // Find and destroy the existing PlayerManager instance
+        if (PlayerManager.Instance != null)
+        {
+            Destroy(PlayerManager.Instance.gameObject);
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     // single tone
