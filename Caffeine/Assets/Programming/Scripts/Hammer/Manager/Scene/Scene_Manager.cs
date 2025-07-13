@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Scene_Manager : MonoBehaviour
 {
     // Single Tone //
-    private static Scene_Manager sceneManager = null;
+    // private static Scene_Manager sceneManager = null;
     // Private Variable //
 
     // Public Variable //
@@ -14,10 +14,10 @@ public class Scene_Manager : MonoBehaviour
 
     // Functions //
     // default functions
-    void Awake()
-    {
-        SingleTone();
-    }
+    // void Awake()
+    // {
+    //     SingleTone();
+    // }
 
     // system Functions
     public void StartGameScene()
@@ -49,28 +49,28 @@ public class Scene_Manager : MonoBehaviour
     }
 
     // single tone
-    private void SingleTone()
-    {
-        if (null == sceneManager)
-        {
-            sceneManager = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    // private void SingleTone()
+    // {
+    //     if (null == sceneManager)
+    //     {
+    //         sceneManager = this;
+    //         DontDestroyOnLoad(this.gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(this.gameObject);
+    //     }
+    // }
 
-    public static Scene_Manager SceneManagerSC
-    {
-        get
-        {
-            if (null == sceneManager)
-            {
-                return null;
-            }
-            return sceneManager;
-        }
-    }
+    // public static Scene_Manager SceneManagerSC
+    // {
+    //     get
+    //     {
+    //         if (null == sceneManager)
+    //         {
+    //             return null;
+    //         }
+    //         return sceneManager;
+    //     }
+    // }
 }
