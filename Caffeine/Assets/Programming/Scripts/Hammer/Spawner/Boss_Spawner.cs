@@ -35,11 +35,15 @@ public class Boss_Spawner : MonoBehaviour
                 obj.GetComponent<EnemyMovement>().Die();
             }
 
-            int bossSpawnIndex = Random.Range(0, bossMonsters.Length - 1);
+            int bossSpawnIndex = Random.Range(0, bossMonsters.Length);
 
             Vector2 randomOffset = Random.insideUnitCircle.normalized * spawnRadius;
             Vector3 spawnPosition = playerTransform.position + (Vector3)randomOffset;
-            Instantiate(bossMonsters[bossSpawnIndex], spawnPosition, Quaternion.identity);
+
+            if (bossMonsters[bossSpawnIndex])
+            {
+                Instantiate(bossMonsters[bossSpawnIndex], spawnPosition, Quaternion.identity);
+            }
         }
     }
 }

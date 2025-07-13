@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1857123135, guid: 5584342bffdcfc745a9b95841fb057a4, type: 3}
+  m_Sprite: {fileID: -1042474839, guid: 56d4afec3aa181446a75ec813386e8e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,9 +185,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.5
 --- !u!50 &2621905729106055475
 Rigidbody2D:
   serializedVersion: 4
@@ -225,7 +225,7 @@ Animator:
   m_GameObject: {fileID: 6237964983722388263}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b26b42fb60a534fd194379c198d4b1ec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 43d7aada26f7a4f9183d79eb47a093b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -248,19 +248,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596da6dccce11a543bac977870c63876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 5000
   currentHealth: 0
   dropXP: 100
   experienceOrbPrefab: {fileID: 1727987041099687454, guid: 68ee634152be70c4cbce195a91b65e01, type: 3}
-  moveSpeed: 1.5
-  attackDamage: 10
+  moveSpeed: 1
+  attackDamage: 200
   attackCoolTime: 2
   chargeSpeed: 15
   chargeDuration: 0.5
   chargeDamage: 30
   chargeCooldown: 8
   enemyPrefabs:
-  - {fileID: 7985619342473693220, guid: e11c875272f18264bb26eae82c731686, type: 3}
+  - {fileID: 7985619342473693220, guid: 678ff1e280d6b44398732ddb97d07db4, type: 3}
   spawnPoints:
   - {fileID: 7565221639334788955}
   - {fileID: 51447794110410517}
