@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossBaguette : MonoBehaviour
 {
@@ -100,6 +101,7 @@ public class BossBaguette : MonoBehaviour
     void Dead()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("Scene_End");
     }
 
     void MoveTowardsPlayer()
