@@ -186,10 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00579d250eae6c4aac513af7bc382fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 5000
   currentHealth: 0
   moveSpeed: 1
-  attackDamage: 15
+  attackDamage: 200
   attackCoolTime: 2
   dropXP: 150
   experienceOrbPrefab: {fileID: 0}

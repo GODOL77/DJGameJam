@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 526335233484012015, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 526335233484012015, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364199433295645453, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1364199433295645453, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3369070947832337577, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3369070947832337577, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
@@ -164,11 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399287841286958211, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3399287841286958211, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 240
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4509116068697268497, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -212,11 +212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232453968118245524, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5232453968118245524, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 180
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4112,7 +4112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1732947087}
-  startTime: 10
+  startTime: 300
   isRunning: 1
   isEnemyDead: 0
 --- !u!1 &1442791761
