@@ -1453,14 +1453,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.41037738, b: 0.85843897, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 663027180, guid: b918b74ffdad823469d7d5e7b381a889, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2884,14 +2884,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.0069419593, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 252722382, guid: 7dd558043341e734aae769a79c7360a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3729,14 +3729,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.37388456, g: 0.0069419593, b: 0.49056602, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -878906318, guid: 4f882d61e123d5f47be4d63efa6a81ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3880,8 +3880,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBAA8\uB4E0 \uC7BC\uC758 \uB2A5\uB825\uC744 \uAC00\uC9C0\uACE0 \uC788\uB294
-    \uC7BC"
+  m_Text: "\uBAA8\uB4E0 \uC7BC\uC758 \uB2A5\uB825\uC744 \uAC00\uC9C4 \uC7BC"
 --- !u!222 &1399052236
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3935,7 +3934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1732947087}
-  startTime: 300
+  startTime: 10
   isRunning: 1
   isEnemyDead: 0
 --- !u!1 &1446810555
@@ -4199,14 +4198,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.08628178, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 547096929, guid: 923d3d1fedc29b843b6e76c1df3183c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6194,7 +6193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC544\uBB34 \uB2A5\uB825\uC774 \uC5C6\uB294 \uAE30\uBCF8 "
+  m_Text: "\uC544\uBB34 \uB2A5\uB825\uC774 \uC5C6\uB294 \uAE30\uBCF8 \uC7BC"
 --- !u!222 &1833948272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6656,7 +6655,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossMonsters:
   - {fileID: 1917943071027196400, guid: 333a08f387904c1458946bddfe789fdf, type: 3}
-  - {fileID: 6237964983722388263, guid: 24fcb5e0d02587d43b23117e02b7c7b8, type: 3}
   spawnRadius: 5
 --- !u!1 &1921673907
 GameObject:
@@ -7806,14 +7804,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1198681763, guid: 8b528bc56774b4849945898bdeddac23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

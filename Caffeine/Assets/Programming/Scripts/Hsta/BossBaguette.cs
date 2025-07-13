@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossBaguette : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class BossBaguette : MonoBehaviour
     private bool canDamage = false;
     private float lastSkillTime;
     private bool isUsingSkill = false;
+    private bool isGameStart = false;
 
     void Awake()
     {
@@ -57,25 +59,49 @@ public class BossBaguette : MonoBehaviour
 
     void Update()
     {
-        if (playerTarget == null || isUsingSkill)
+        if (isGameStart)
         {
-            return;
-        }
+            if (playerTarget == null || isUsingSkill)
+            {
+                return;
+            }
 
-        // 스킬 사용 가능 여부 확인
-        if (Time.time >= lastSkillTime + skillCooldown)
-        {
-            StartCoroutine(FireMissileSequence());
+            // 스킬 사용 가능 여부 확인
+            if (Time.time >= lastSkillTime + skillCooldown)
+            {
+                StartCoroutine(FireMissileSequence());
+            }
         }
     }
 
     void FixedUpdate()
     {
-        if (playerTarget != null && !isUsingSkill)
+        if (isGameStart)
         {
-            SpriteFlip();
-            MoveTowardsPlayer();
+            if (playerTarget != null && !isUsingSkill)
+            {
+                SpriteFlip();
+                MoveTowardsPlayer();
+            }
         }
+    }
+
+    // Animation Event
+    void StartAttack()
+    {
+        isGameStart = true;
+        animator.SetBool("isStart?", true);
+    }
+
+    void AttackEnd()
+    {
+        animator.SetBool("isAttack?", false);
+    }
+
+    void Dead()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene("Scene_End");
     }
 
     void MoveTowardsPlayer()
@@ -118,6 +144,8 @@ public class BossBaguette : MonoBehaviour
             GameObject missileObj = Instantiate(missilePrefab, missileSpawnPos, Quaternion.identity);
             Missile missileScript = missileObj.GetComponent<Missile>();
 
+            animator.SetBool("isAttack?", true);
+
             if (missileScript != null)
             {
                 // 미사일 스크립트에 목표 위치와 소환할 적 정보 전달
@@ -150,30 +178,43 @@ public class BossBaguette : MonoBehaviour
     {
         if (playerTarget.position.x > transform.position.x)
         {
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
         }
         else
         {
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        spriteRenderer.color = new Color(1,0,0,1);
+        Invoke("ResetColor", 0.3f);
+
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+    void ResetColor()
+    {
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+
     void Die()
     {
         Debug.Log("Baguette Boss Died!");
+
+        animator.SetBool("isDead?", true);
+        isUsingSkill = false;
+        canDamage = false;
+        moveSpeed = 0.0f;
+
         if (experienceOrbPrefab != null)
         {
             Instantiate(experienceOrbPrefab, transform.position, Quaternion.identity);
         }
-        Destroy(gameObject);
     }
 }

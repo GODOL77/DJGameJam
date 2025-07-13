@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq; // For .FirstOrDefault()
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct playerLevelDesign
@@ -225,6 +226,7 @@ public class PlayerManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Player Died!");
+            SceneManager.LoadScene("Scene_End");
             // TODO: 게임 오버 처리 (예: 게임 재시작, UI 표시 등)
             // Destroy(gameObject); // PlayerManager는 DontDestroyOnLoad이므로 파괴하지 않음
         }

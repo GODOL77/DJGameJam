@@ -9,6 +9,7 @@ public class Boss_Spawner : MonoBehaviour
     private Vector3 playerPos = new Vector3(0, 0, 0);
     private Transform playerTransform;
     private bool bossSpawn = false;
+    private EnemyMovement enemy;
 
     void Update()
     {
@@ -26,6 +27,14 @@ public class Boss_Spawner : MonoBehaviour
         if (!bossSpawn)
         {
             bossSpawn = true;
+
+            GameObject[] inGameEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject obj in inGameEnemy)
+            {
+                obj.GetComponent<EnemyMovement>().Die();
+            }
+
             int bossSpawnIndex = Random.Range(0, bossMonsters.Length - 1);
 
             Vector2 randomOffset = Random.insideUnitCircle.normalized * spawnRadius;
