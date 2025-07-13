@@ -228,6 +228,10 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Player Died!");
             if (SceneManager.GetActiveScene().name == "Scene_tuto")
             {
+                 if (PlayerManager.Instance != null)
+        {
+            Destroy(PlayerManager.Instance.gameObject);
+        }
                 SceneManager.LoadScene("Scene_InGame");
             }
             if (SceneManager.GetActiveScene().name == "Scene_InGame")
