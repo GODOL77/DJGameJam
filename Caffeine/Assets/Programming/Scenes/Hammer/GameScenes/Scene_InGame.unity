@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 663027180, guid: b918b74ffdad823469d7d5e7b381a889, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6709337714c9bb94c80a88f819c00845, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2992,7 +2992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 252722382, guid: 7dd558043341e734aae769a79c7360a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a79fec8bcbe236b45b7f5b10a53ea982, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3914,7 +3914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -878906318, guid: 4f882d61e123d5f47be4d63efa6a81ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80ac4f9575532454e8eed6d20449ba4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4544,7 +4544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 547096929, guid: 923d3d1fedc29b843b6e76c1df3183c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ea8a415129635b4f8db6f5ce5da9b10, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6735,8 +6735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossMonsters:
+  - {fileID: 6237964983722388263, guid: 24fcb5e0d02587d43b23117e02b7c7b8, type: 3}
   - {fileID: 1917943071027196400, guid: 333a08f387904c1458946bddfe789fdf, type: 3}
-  spawnRadius: 5
+  spawnRadius: 8
 --- !u!1 &1924478719
 GameObject:
   m_ObjectHideFlags: 0
@@ -7939,7 +7940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1198681763, guid: 8b528bc56774b4849945898bdeddac23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 934ed3fa90a83d44cb068ea2c239d723, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

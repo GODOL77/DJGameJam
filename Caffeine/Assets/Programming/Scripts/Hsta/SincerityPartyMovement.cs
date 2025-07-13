@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SincerityPartyMovement : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class SincerityPartyMovement : MonoBehaviour
     private bool canAttack = false;
     private float currentAttackCoolTime = 0.0f;
     private bool canDamage = false;
+
+    private bool isGameStart = false;
 
 
     void Awake()
@@ -75,44 +78,65 @@ public class SincerityPartyMovement : MonoBehaviour
 
     void Update()
     {
-        if (playerTarget == null || isCharging)
+        if (isGameStart)
         {
-            return;
-        }
-
-        // AI 행동 결정
-        // 1. 소환 스킬
-        if (Time.time >= lastSpawnTime + spawnCooldown)
-        {
-            StartCoroutine(SpawnEnemies());
-        }
-        // 2. 돌진 스킬
-        else if (Time.time >= lastChargeTime + chargeCooldown)
-        {
-            StartCoroutine(Charge());
-        }
-
-        // 기본 공격 쿨타임 관리
-        if (canAttack)
-        {
-            if (currentAttackCoolTime < attackCoolTime)
+            if (playerTarget == null || isCharging)
             {
-                currentAttackCoolTime += Time.deltaTime;
+                return;
             }
-            else
+
+            // AI 행동 결정
+            // 1. 소환 스킬
+            if (Time.time >= lastSpawnTime + spawnCooldown)
             {
-                currentAttackCoolTime = 0.0f;
+                StartCoroutine(SpawnEnemies());
+            }
+            // 2. 돌진 스킬
+            else if (Time.time >= lastChargeTime + chargeCooldown)
+            {
+                StartCoroutine(Charge());
+            }
+
+            // 기본 공격 쿨타임 관리
+            if (canAttack)
+            {
+                if (currentAttackCoolTime < attackCoolTime)
+                {
+                    currentAttackCoolTime += Time.deltaTime;
+                }
+                else
+                {
+                    currentAttackCoolTime = 0.0f;
+                }
             }
         }
     }
 
     void FixedUpdate()
     {
-        if (playerTarget != null && !isCharging)
+        if (playerTarget != null && !isCharging && isGameStart)
         {
             SpriteFlip();
             MoveTowardsPlayer();
         }
+    }
+
+    // 애니메이션 이벤트
+    void StartAttack()
+    {
+        isGameStart = true;
+        animator.SetBool("isStart?", true);
+    }
+
+    void Dead()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene("Scene_End");
+    }
+
+    void AttackEnd()
+    {
+        animator.SetBool("isAttack?", false);
     }
 
     void MoveTowardsPlayer()
@@ -149,6 +173,7 @@ public class SincerityPartyMovement : MonoBehaviour
 
         // 소환 시 잠시 멈춤
         rb.velocity = Vector2.zero;
+        animator.SetBool("isAttack?", true);
         yield return new WaitForSeconds(1.0f); // 1초 대기
 
         if (spawnPoints.Length == 0 || enemyPrefabs.Length == 0)
@@ -210,11 +235,11 @@ public class SincerityPartyMovement : MonoBehaviour
     {
         if (playerTarget.position.x > transform.position.x)
         {
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
         }
         else
         {
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -222,11 +247,18 @@ public class SincerityPartyMovement : MonoBehaviour
     {
         currentHealth -= damage;
         Debug.Log($"Boss took {damage} damage. Current Health: {currentHealth}");
+        spriteRenderer.color = new Color(1,0,0,1);
+        Invoke("ResetColor", 0.3f);
 
         if (currentHealth <= 0)
         {
             Die();
         }
+    }
+
+    void ResetColor()
+    {
+        spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
     void Die()
@@ -249,16 +281,10 @@ public class SincerityPartyMovement : MonoBehaviour
 
         canDamage = false;
         moveSpeed = 0.0f;
-        if(col != null) col.isTrigger = true;
-        if(animator != null) animator.SetBool("isDead?", true);
+        if (col != null) col.isTrigger = true;
+        if (animator != null) animator.SetBool("isDead?", true);
 
         // Stop all coroutines to prevent further actions
         StopAllCoroutines();
-    }
-
-    // This method is likely called by an animation event
-    private void Dead()
-    {
-        Destroy(gameObject);
     }
 }
