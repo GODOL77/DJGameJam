@@ -269,11 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 526335233484012015, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 526335233484012015, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364199433295645453, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364199433295645453, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 99
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2211702065562465971, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: m_Name
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3369070947832337577, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 0
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 3399287841286958211, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: spawnInterval
@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399287841286958211, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 99
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 4509116068697268497, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232453968118245524, guid: 8ff5a0cc7408cd345bd14d4bb065b3d4, type: 3}
       propertyPath: initialSpawnDelay
-      value: 99
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 1441103452}
   m_Layer: 0
   m_Name: Game Manager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6622,7 +6622,7 @@ GameObject:
   - component: {fileID: 1902631602}
   m_Layer: 0
   m_Name: Boss Spawner
-  m_TagString: Untagged
+  m_TagString: Boss_Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
