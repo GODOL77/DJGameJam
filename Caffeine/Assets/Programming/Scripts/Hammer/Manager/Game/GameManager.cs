@@ -43,7 +43,10 @@ public class GameManager : MonoBehaviour
             bossSpawner.BossSpawn();
         }
 
-        isEnemyDead = false;
+        if (currentTime < -0.5f)
+        {
+            isEnemyDead = false;
+        }
 
         // 분:초 형식으로 변환해서 UI 표시
         int minutes = Mathf.FloorToInt(currentTime / 60f);
