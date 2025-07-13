@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Programming/Scenes/Hammer/GameScenes/Scene_InGame.unity
     guid: aad203a50e7f84729847b366d5ef30a0
+  - enabled: 1
+    path: Assets/Programming/Scenes/Hammer/GameScenes/Scene_End.unity
+    guid: a51fb91cfbd9d4b538f654b4074381d9
   m_configObjects: {}
