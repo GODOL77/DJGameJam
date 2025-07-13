@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56d4afec3aa181446a75ec813386e8e7
+guid: 64cd105498f744d40852390eda1a29c5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_0
+      name: choose_AttackPower_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef2bea853f93451089b6e3c71d0f8b6
-      internalID: -1042474839
+      spriteID: 66724ff40f0b34b548fca9523c6d713c
+      internalID: 835498009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_1
+      name: choose_AttackPower_1
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35186c4f6e6794951ab2fa3db42ee9bc
-      internalID: -30709177
+      spriteID: 13e0e8455107a4618b4156b0f7bd3b57
+      internalID: 952321743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_2
+      name: choose_AttackPower_2
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e3a8fc7f9e24ba592bea94a1f531e0
-      internalID: -1376110766
+      spriteID: 6751b927358694ce1ab89d5e719073c1
+      internalID: -249531681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_3
+      name: choose_AttackPower_3
       rect:
         serializedVersion: 2
         x: 600
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397dccfca76cd484ba627dd6f9daa703
-      internalID: -1147389307
+      spriteID: d0fc95d04bf8447048fd4b2218559df3
+      internalID: -966379048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_Move_4
+      name: choose_AttackPower_4
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 200
-        height: 246
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29225942fb40e45a2890c46e7c623092
-      internalID: -1093373712
+      spriteID: 3917b430638fe473a9db02a9c21f7ba0
+      internalID: -876043705
       vertices: []
       indices: 
       edges: []
@@ -212,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SUNGSIMDANG_Move_0: -1042474839
-      SUNGSIMDANG_Move_1: -30709177
-      SUNGSIMDANG_Move_2: -1376110766
-      SUNGSIMDANG_Move_3: -1147389307
-      SUNGSIMDANG_Move_4: -1093373712
+      choose_AttackPower_0: 835498009
+      choose_AttackPower_1: 952321743
+      choose_AttackPower_2: -249531681
+      choose_AttackPower_3: -966379048
+      choose_AttackPower_4: -876043705
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

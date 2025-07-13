@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aefbeec89c59d6045b6aacc3d80a9c58
+guid: 80e27bbf1f92547f8868920e450e16fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_0
+      name: BossBaguette_Spawn_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b6a9c27ef87e4e2585e82cf9056ba52
-      internalID: 650622619
+      spriteID: 63fff8d428b3a4e63a81c021260d8382
+      internalID: 1690711297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_1
+      name: BossBaguette_Spawn_1
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1270c32fb6c411ea41b67de361ee7c
-      internalID: -843837201
+      spriteID: c4d54c2fe6e2246b086c4a934a759d88
+      internalID: 1701074854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_2
+      name: BossBaguette_Spawn_2
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3056a4c3f260b47c5a5e370a772ef4df
-      internalID: -212459234
+      spriteID: 19296346ee5ec46b59feba1f858527b9
+      internalID: -237348158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_3
+      name: BossBaguette_Spawn_3
       rect:
         serializedVersion: 2
         x: 600
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d90277189d151455ca9db4a0d8e9ce35
-      internalID: -1627949423
+      spriteID: 1890b750e4cf346e4ba48804484c956c
+      internalID: 1298342451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_4
+      name: BossBaguette_Spawn_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ca67aab196847dcb184142947e02e7
+      internalID: 1419637845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_5
       rect:
         serializedVersion: 2
         x: 1000
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4074d165abc9b463f837631162d4569a
-      internalID: -1545690685
+      spriteID: 4e6d61945cba243dfaa00c849cccc2fb
+      internalID: -1036218301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_5
+      name: BossBaguette_Spawn_6
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff1a2111a69c94da283d500af2581e8d
-      internalID: -670082252
+      spriteID: 46d009513f5744b4f95802d828c1bbff
+      internalID: 254619862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_6
+      name: BossBaguette_Spawn_7
       rect:
         serializedVersion: 2
         x: 1400
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37910a2f5d64c4e25a9d035c6fd50a53
-      internalID: 2076125509
+      spriteID: 4314c65953c5f4c68a08ec3d517dd893
+      internalID: 817539428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_7
+      name: BossBaguette_Spawn_8
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09efaadf6ad7a42eab10b14b3f46d815
-      internalID: -424044793
+      spriteID: 9a7fefc38c3ec41a8b2a5740aea45061
+      internalID: -1331474073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_8
+      name: BossBaguette_Spawn_9
       rect:
         serializedVersion: 2
         x: 1800
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa26532ac57141368a4dedbd3b7e756
-      internalID: -1380037335
+      spriteID: 8b3c4fe06b9734500b79aac74030c6cc
+      internalID: 1447311722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_9
+      name: BossBaguette_Spawn_10
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96a74458de4854f0aba5532b9049baf4
-      internalID: -1182451725
+      spriteID: 343404f268bd54a869e65ff77f6dc035
+      internalID: 896986312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_10
+      name: BossBaguette_Spawn_11
       rect:
         serializedVersion: 2
         x: 2200
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9d354684973b49cd947dedf09c3198e
-      internalID: 2135575956
+      spriteID: 9ccc1725138c94bdab746f3016e36f54
+      internalID: 381874135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_11
+      name: BossBaguette_Spawn_12
       rect:
         serializedVersion: 2
         x: 2400
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da6eae7b924d84ab99e4a897dbb20afe
-      internalID: 1863312408
+      spriteID: bd65ba5c60c9a42cc9f5b683ffda9fb7
+      internalID: 770508922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SUNGSIMDANG_dead_12
+      name: BossBaguette_Spawn_13
       rect:
         serializedVersion: 2
         x: 2600
         y: 0
         width: 200
-        height: 288
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,8 +384,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5174d7599af4b6cbff624bec218bef
-      internalID: -1611212091
+      spriteID: 529e6e20f2d0c49ba9ac8f2529438d7c
+      internalID: -71938834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_14
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2182af5dbdaa042f1abe26cb53065209
+      internalID: 2022989209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_15
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92422200c18064be0b8952b7adc7193f
+      internalID: 1889770587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_16
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6453860b7a01a488aa56f055ae2b43e4
+      internalID: -1740064679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_17
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c711b5b12e04f3cac0157609e68ead
+      internalID: 82568977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b11dd44c524470a9f3fb5a032a834c
+      internalID: -906503996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossBaguette_Spawn_19
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4042e1eb055f443158ec2307f7b13b72
+      internalID: -1089549406
       vertices: []
       indices: 
       edges: []
@@ -380,19 +527,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SUNGSIMDANG_dead_0: 650622619
-      SUNGSIMDANG_dead_1: -843837201
-      SUNGSIMDANG_dead_10: 2135575956
-      SUNGSIMDANG_dead_11: 1863312408
-      SUNGSIMDANG_dead_12: -1611212091
-      SUNGSIMDANG_dead_2: -212459234
-      SUNGSIMDANG_dead_3: -1627949423
-      SUNGSIMDANG_dead_4: -1545690685
-      SUNGSIMDANG_dead_5: -670082252
-      SUNGSIMDANG_dead_6: 2076125509
-      SUNGSIMDANG_dead_7: -424044793
-      SUNGSIMDANG_dead_8: -1380037335
-      SUNGSIMDANG_dead_9: -1182451725
+      BossBaguette_Spawn_0: 1690711297
+      BossBaguette_Spawn_1: 1701074854
+      BossBaguette_Spawn_10: 896986312
+      BossBaguette_Spawn_11: 381874135
+      BossBaguette_Spawn_12: 770508922
+      BossBaguette_Spawn_13: -71938834
+      BossBaguette_Spawn_14: 2022989209
+      BossBaguette_Spawn_15: 1889770587
+      BossBaguette_Spawn_16: -1740064679
+      BossBaguette_Spawn_17: 82568977
+      BossBaguette_Spawn_18: -906503996
+      BossBaguette_Spawn_19: -1089549406
+      BossBaguette_Spawn_2: -237348158
+      BossBaguette_Spawn_3: 1298342451
+      BossBaguette_Spawn_4: 1419637845
+      BossBaguette_Spawn_5: -1036218301
+      BossBaguette_Spawn_6: 254619862
+      BossBaguette_Spawn_7: 817539428
+      BossBaguette_Spawn_8: -1331474073
+      BossBaguette_Spawn_9: 1447311722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

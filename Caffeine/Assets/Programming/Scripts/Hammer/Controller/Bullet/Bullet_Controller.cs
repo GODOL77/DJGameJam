@@ -107,11 +107,22 @@ public class Bullet_Controller : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyMovement>().TakeDamage(playerManager.attackDamage);
+            if (other.GetComponent<EnemyMovement>())
+            {
+                other.GetComponent<EnemyMovement>().TakeDamage(playerManager.attackDamage);
+            }
+            if (other.GetComponent<BossBaguette>())
+            {
+                other.GetComponent<BossBaguette>().TakeDamage(playerManager.attackDamage);
+            }
+            if (other.GetComponent<SincerityPartyMovement>())
+            {
+                other.GetComponent<SincerityPartyMovement>().TakeDamage(playerManager.attackDamage);
+            }
+            
             if (!weaponManager.grapeJam && !weaponManager.gameJam)
             {
                 Destroy(gameObject);
-
             }
         }
     }
