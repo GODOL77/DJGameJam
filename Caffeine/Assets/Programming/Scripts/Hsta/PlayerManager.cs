@@ -226,7 +226,14 @@ public class PlayerManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Player Died!");
-            SceneManager.LoadScene("Scene_End");
+            if (SceneManager.GetActiveScene().name == "Scene_tuto")
+            {
+                SceneManager.LoadScene("Scene_InGame");
+            }
+            if (SceneManager.GetActiveScene().name == "Scene_InGame")
+            {
+                SceneManager.LoadScene("Scene_End");
+            }
             // TODO: 게임 오버 처리 (예: 게임 재시작, UI 표시 등)
             // Destroy(gameObject); // PlayerManager는 DontDestroyOnLoad이므로 파괴하지 않음
         }
