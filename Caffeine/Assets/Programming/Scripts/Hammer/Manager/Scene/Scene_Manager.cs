@@ -40,7 +40,7 @@ public class Scene_Manager : MonoBehaviour
             Destroy(PlayerManager.Instance.gameObject);
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene_InGame");
     }
 
     public void QuitGame()
