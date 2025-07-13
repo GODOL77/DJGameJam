@@ -22,7 +22,7 @@ public class Scene_Manager : MonoBehaviour
     // system Functions
     public void StartGameScene()
     {
-        SceneManager.LoadScene("Scene_InGame");
+        SceneManager.LoadScene("Scene_tuto");
     }
 
     // single tone
